@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/bg_permission"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_16"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_8"
+                    android:text="@string/delete_dialog_title"
+                    android:textColor="@color/black_pearl"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/redhatdisplay_bold"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_5"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/delete_dialog_text"
+                    android:textColor="@color/black_pearl"
+                    android:textSize="@dimen/text_size_16"
+                    android:fontFamily="@font/redhatdisplay_medium"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cancelButton"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:elevation="10dp"
+                        android:background="@drawable/ic_cancel_button_background"
+                        android:layout_marginEnd="@dimen/margin_12"
+                        android:textAllCaps="false"
+                        android:text="@string/cancel"
+                        android:textColor="@color/black_text"
+                        android:textSize="@dimen/text_size_18"
+                        android:fontFamily="@font/redhatdisplay_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deleteButton"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/margin_12"
+                        android:elevation="10dp"
+                        android:background="@drawable/ic_delete_button_background"
+                        android:textAllCaps="false"
+                        android:text="@string/delete"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18"
+                        android:fontFamily="@font/redhatdisplay_bold"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

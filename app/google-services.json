@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "128132681564",
+    "project_id": "recovery-c374b",
+    "storage_bucket": "recovery-c374b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128132681564:android:266dd649d67ddc8a667b99",
+        "android_client_info": {
+          "package_name": "com.adentech.rcvr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128132681564-6h1gobaha5g7scuv802lt0j9irscfuec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adentech.rcvr",
+            "certificate_hash": "5aa970c7eaaf7ef270da96dac08e27d49ea506e4"
+          }
+        },
+        {
+          "client_id": "128132681564-pn3suej4gg639skcmfl1a86v2qie2a9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIgy5Wop-oM_CLDl8R2VRPQbI5d8_YUDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128132681564-pn3suej4gg639skcmfl1a86v2qie2a9j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

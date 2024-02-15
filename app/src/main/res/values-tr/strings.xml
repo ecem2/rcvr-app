@@ -1,0 +1,177 @@
+<resources>
+    <string name="app_name">Recovery</string>
+
+    <!-- ONBOARD -->
+    <string name="get_back_the_images_you_lost">Kaybettiğiniz Fotoğrafları Geri Alın</string>
+    <string name="recover_deleted_photos_from_your_gallery_with_reco">Reco ile galerinizden silinen fotoğrafları kurtarın.</string>
+    <string name="get_started">Başlayın</string>
+    <string name="exit_message">Çıkmak için lütfen tekrar GERİ\'ye tıklayın</string>
+    <string name="videos">Videolar</string>
+    <string name="deleted_videos_were_found">Silinen videolar bulundu</string>
+    <string name="videos_recovered">Kurtarılan videolar</string>
+    <string name="there_are_no_videos_in_your_trash">Çöp kutunuzda hiç video yok</string>
+    <string name="restore_audio">Sesi geri yükle</string>
+    <string name="restore_video">Videoyu geri yükle</string>
+    <string name="clear_large_media_files">Büyük medya dosyalarını temizleyin</string>
+    <string name="restore_dialog_audio_title">Ses başlığını geri yükle</string>
+    <string name="restore_dialog_audio_text">Ses metnini geri yükle</string>
+    <string name="audios">Sesler</string>
+    <string name="there_are_no_audio_in_your_trash">Çöp kutunuzda ses yok</string>
+    <string name="restore_dialog_video_text">Video metnini geri yükle</string>
+    <string name="restore_dialog_video_title">Video başlığını geri yükle</string>
+    <string name="you_can_delete_duplicated_photos_and_videos">Yinelenen fotoğraf ve videoları silebilirsiniz</string>
+    <string name="remove_duplicates">Yinelenenleri Kaldır</string>
+    <string name="year_p"> $99.99/ Yıllık</string>
+    <string name="month_p"> $99.99/ Aylık</string>
+    <string name="no_commitment_cancel_anytime">Taahhüt yok, istediğin zaman iptal et</string>
+
+
+
+
+    <!-- HOME -->
+    <string name="scan">Tarama</string>
+    <string name="let_s_pick_the_best_choice">Hadi En İyi Seçeneği Seçelim.</string>
+    <string name="free_scan">Ücretsiz Tarama</string>
+    <string name="normal_scan">Normal Tarama</string>
+    <string name="one_click_quick_recovery">Tek tıkla hızlı kurtarma</string>
+    <string name="start_scanning">&#160;&#160;&#160;&#160;&#160;&#160;Taramayı Başlat 🔥</string>
+    <string name="premium_scan">Premium Tarama</string>
+    <string name="deep_scan">Derin tarama</string>
+    <string name="unlock_premium_features_for_the_deep_scan">Derin tarama için premium özelliklerin kilidini açın.</string>
+
+    <!-- DIALOG -->
+    <string name="deleted_photos_were_found">Silinmiş fotoğraflar bulundu</string>
+    <string name="recover_your_lost_photos">Silinmiş fotoğraflarınızı şimdi kurtarın.</string>
+    <string name="recover_all">HEPSİNİ KURTAR</string>
+
+    <!-- SCAN -->
+    <string name="photo_recover">Fotoğraf Kurtarma</string>
+    <string name="video_recover">Video Kurtarma</string>
+    <string name="audio_recover">Ses Kurtarma</string>
+    <string name="file_recover">Dosya Kurtarma</string>
+    <string name="recover_deleted_videos">Silinen videoları kurtar</string>
+    <string name="recover_deleted_audios">Silinen sesleri kurtar</string>
+    <string name="recover_deleted_files">Silinen dosyaları kurtar</string>
+    <string name="restore_your_data">Verilerinizi Geri Yükleyin</string>
+    <string name="internal">Dahili</string>
+    <string name="storage">Depolama</string>
+
+    <string name="scanning_">Taranıyor…</string>
+    <string name="completed">TAMAMLANDI</string>
+    <string name="stop_scanning">Taramayı Durdur</string>
+    <string name="please_wait">Lütfen Bekleyin</string>
+    <string name="recover_deleted_photos">Silinen Fotoğrafları Kurtar</string>
+    <string name="photos_recovered">Fotoğraflar kurtarılıyor…</string>
+
+    <!-- RESULT -->
+    <string name="deleted_files">Silinmiş Dosyalar</string>
+    <string name="recover">Kurtarma</string>
+    <string name="recover_formatted">Kurtarma (%1$s)</string>
+    <string name="list_is_empty">Liste boş. Lütfen dosya seçiniz.</string>
+    <string name="deleted">Silinmiş</string>
+    <string name="file_size_kb">%1$s kb</string>
+    <string name="deleted_images">Silinen Fotoğraflar</string>
+    <string name="gallery_images">Galeri</string>
+    <string name="trash">Çöp Kutusu</string>
+    <string name="deleted_box">Silinmiş</string>
+    <string name="all_deleted_images">Silinmiş Fotoğraflar</string>
+    <string name="restore_photo">Fotoğrafı Kurtar</string>
+    <string name="delete_photo">Fotoğrafı Sil</string>
+    <string name="could_not_delete">Fotoğraf silinemedi.</string>
+
+    <string name="a_few_minutes">Bu işlem birkaç dakika sürebilir.\nLütfen bekleyin…</string>
+    <string name="format_founded">+%1$d</string>
+
+
+    <!-- SUBSCRIPTION -->
+    <string name="get_premium">Premium Olun</string>
+    <string name="weekly_title">Haftalık Premium</string>
+    <string name="yearly_title">Yıllık Premium</string>
+    <string name="monthly_title">Aylık Premium</string>
+    <string name="lifetime_title">Ömür Boyu Premium</string>
+    <string name="week_after_price">/ hafta</string>
+    <string name="month_after_price">/ ay</string>
+    <string name="year_after_price">/ yıl</string>
+    <string name="lifetime_after_price">Ömür Boyu</string>
+    <string name="yearly">Yıllık</string>
+    <string name="year">Yıl</string>
+    <string name="month">Ay</string>
+    <string name="upgrade_to_pro">Pro\'ya yükselt.</string>
+    <string name="get_access_to_all_premium_features">Tüm premium özelliklere erişin.</string>
+    <string name="unlock_all_properties">Tüm özelliklerin kilidini açın.</string>
+    <string name="ads_free_using">Reklamlar olmadan kullanım.</string>
+    <string name="subs_continue">Devam Et</string>
+    <string name="subs_continue_free_trial">3 Gün Ücretsiz Dene</string>
+    <string name="no_connection">Bağlantı Yok</string>
+    <string name="check_internet">Lütfen internet bağlantınızı kontrol edin</string>
+    <string name="try_again">Tekrar Deneyin</string>
+    <string name="auto_renewable_text">Abonelik otomatik olarak yenilenebilir. Aboneliğinizi istediğiniz zaman iptal edebilirsiniz.</string>
+    <string name="privacy_policy"><u>Gizlilik Politikası</u></string>
+    <string name="terms_of_use"><u>Kullanım Şartları</u></string>
+    <string name="yearly_free_trial_period">Ücretsiz deneme sürümünden sonra aboneliğinizi iptal etmediğiniz takdirde %1$s/yıl ile ücretlendirileceksiniz.</string>
+    <string name="monthly_free_trial_period">Ücretsiz deneme sürümünden sonra aboneliğinizi iptal etmediğiniz takdirde %1$s/ay ile ücretlendirileceksiniz.</string>
+    <string name="weekly_free_trial_period">Ücretsiz deneme sürümünden sonra aboneliğinizi iptal etmediğiniz takdirde %1$s/hafta ile ücretlendirileceksiniz.</string>
+    <string name="lifetime_free_trial_period">Ücretsiz deneme sürümünden sonra aboneliğinizi iptal etmediğiniz takdirde %1$s ile ücretlendirileceksiniz.\n</string>
+
+    <!-- Exception Errors -->
+    <string name="context_finder_error">İzinler bir Aktivite bağlamında çağrılmalıdır</string>
+
+    <!-- DIALOG -->
+    <string name="loading">Silinen Fotoğraflar Getiriliyor…</string>
+    <string name="restore_dialog_title">Seçilen fotoğraf geri yüklendi</string>
+    <string name="restore_dialog_text">Kurtardığınız fotoğrafı, galerinizde ya da /DCIM/Reco_Images dosya yolunda görebilirsiniz.</string>
+    <string name="check">Kontrol Et</string>
+    <string name="delete_dialog_title">Seçilen fotoğraf dosyalardan silinecek</string>
+    <string name="delete_dialog_text">Silmek istediğine emin misin ?</string>
+    <string name="cancel">Vazgeç</string>
+    <string name="delete">Sil</string>
+    <string name="close">Kapat</string>
+    <string name="gallery">Galeri</string>
+    <string name="weekly">Haftalık</string>
+    <string name="monthly">Aylık</string>
+    <string name="lifetime">Ömür Boyu</string>
+    <string name="first_year">/ilk yıl</string>
+    <string name="okk">Tamam</string>
+    <string name="cancel_button">Vazgeç</string>
+    <string name="go_to_settings">Ayarlar</string>
+    <string name="allow">İzin Ver</string>
+
+    <string name="read_write_permission_title">İzin Gerekli</string>
+    <string name="read_write_permission_description">Fotoğraflara erişmek için izniniz gerekmektedir. İzin diyaloğu görünmezse, uygulama ayarlarından izin vermeniz gerekir.</string>
+
+    <string name="save_permission">Kurtarmak istediğiniz fotoğrafı dosyalarınıza kaydedebilmemiz için izin vermelisiniz.</string>
+
+    <!-- Folder Permission Dialog -->
+    <string name="folder_permission_title">İzin Gerekli</string>
+    <string name="folder_permission_button">BU KLASÖRÜ KULLAN</string>
+    <string name="folder_permission_description">Silinen dosyalara erişmek için gelen ekranda\n<font color='#FFFFFF'>BU KLASÖRÜ KULLAN</font>\nbutonuna tıklayınız.</string>
+    <string name="folder_permission_allow">Anladım</string>
+
+
+    <string name="documents">Documents</string>
+    <string name="there_are_no_photos_in_your_gallery">Galerinizde fotoğraf bulunmamaktadır.</string>
+    <string name="there_are_no_photos_in_your_trash">Çöp kutunuzda fotoğraf bulunmamaktadır.</string>
+
+    <string name="watch_ads">Reklam İzle</string>
+
+    <string name="loading_ads">Reklam Yükleniyor…</string>
+    <string name="watch_ads_exhausted">3 reklam/gün limitine ulaşıldı.</string>
+
+    <string name="or">veya</string>
+    <string name="files">Dosyalar</string>
+    <string name="images">Fotoğraflar</string>
+
+    <!-- Billing Error Messages-->
+    <string name="billing_service_unavailable">Fatura servisi şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="error_occured">İstek işlenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="not_supported">Bu özellik cihazınızda desteklenmiyor.</string>
+    <string name="already_owned">Bu öğeyi zaten satın aldınız.</string>
+    <string name="do_not_own">Bu öğeye sahip değilsiniz.</string>
+    <string name="item_not_available">Bu öğe satın alınabilir değil.</string>
+    <string name="service_disconnected">Fatura servisi bağlantısı kesildi. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="service_timed_out">Fatura servisi zaman aşımına uğradı. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="service_unavailable">Fatura servisi şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="purchase_cancelled">Satın alma iptal edildi.</string>
+    <string name="unknown_error">Bilinmeyen bir hata oluştu.</string>
+
+</resources>

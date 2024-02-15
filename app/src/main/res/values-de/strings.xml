@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wiederherstellung</string>
+
+    <!-- ONBOARD -->
+    <string name="get_back_the_images_you_lost">Holen Sie sich die verlorenen Bilder zurück.</string>
+    <string name="recover_deleted_photos_from_your_gallery_with_reco">Stellen Sie gelöschte Fotos aus Ihrer Galerie mit Reco wieder her.</string>
+    <string name="get_started">Loslegen</string>
+    <string name="exit_message">Bitte klicken Sie noch einmal auf ZURÜCK, um zu beenden</string>
+    <string name="videos">Videos</string>
+    <string name="deleted_videos_were_found">Gelöschte Videos gefunden</string>
+    <string name="videos_recovered">Videos wiederhergestellt</string>
+    <string name="there_are_no_videos_in_your_trash">Es befinden sich keine Videos in Ihrem Papierkorb</string>
+    <string name="restore_audio">Audio wiederherstellen</string>
+    <string name="restore_video">Video wiederherstellen</string>
+    <string name="clear_large_media_files">Löschen Sie große Mediendateien</string>
+    <string name="restore_dialog_audio_title">Audiotitel wiederherstellen</string>
+    <string name="restore_dialog_audio_text">Audiotext wiederherstellen</string>
+    <string name="audios">Audiotext wiederherstellen</string>
+    <string name="there_are_no_audio_in_your_trash">In Ihrem Papierkorb befinden sich keine Audiodateien</string>
+    <string name="restore_dialog_video_text">Videotext wiederherstellen</string>
+    <string name="restore_dialog_video_title">Videotitel wiederherstellen</string>
+    <string name="you_can_delete_duplicated_photos_and_videos">Sie können Duplikate Fotos und Videos löschen</string>
+    <string name="remove_duplicates">Duplikate Entfernen</string>
+    <string name="year_p"> $99.99/ Jahr</string>
+    <string name="month_p"> $99.99/ Monat</string>
+    <string name="no_commitment_cancel_anytime">Keine Verpflichtung, jederzeit kündbar</string>
+
+
+
+
+    <!-- HOME -->
+    <string name="scan">Scannen</string>
+    <string name="let_s_pick_the_best_choice">Lassen Sie uns die beste Wahl treffen.</string>
+    <string name="free_scan">Kostenloser Scan</string>
+    <string name="normal_scan">Normaler Scan</string>
+    <string name="one_click_quick_recovery">Schnelle Wiederherstellung mit einem Klick</string>
+    <string name="start_scanning">&#160;&#160;&#160;&#160;&#160;&#160;Scannen starten 🔥</string>
+    <string name="premium_scan">Premium-Scan</string>
+    <string name="deep_scan">Tiefenscan</string>
+    <string name="unlock_premium_features_for_the_deep_scan">Schalten Sie Premium-Funktionen für den Tiefenscan frei.</string>
+
+    <!-- SCAN -->
+    <string name="photo_recover">Foto-Wiederherstellung</string>
+    <string name="scanning_">Scannen…</string>
+    <string name="video_recover">Video-Wiederherstellung</string>
+    <string name="audio_recover">Audio-wiederherstellung</string>
+    <string name="file_recover">Wiederherstellung von Dateien</string>
+    <string name="recover_deleted_videos">Gelöschte Videos wiederherstellen</string>
+    <string name="recover_deleted_audios">Gelöschte Audios wiederherstellen</string>
+    <string name="recover_deleted_files">Gelöschte Dateien wiederherstellen</string>
+    <string name="completed">ABGESCHLOSSEN</string>
+    <string name="restore_your_data">Stellen Sie Ihre Daten wieder her</string>
+    <string name="internal">Intern</string>
+    <string name="storage">Lagerung</string>
+
+    <string name="stop_scanning">Scannen stoppen</string>
+    <string name="recover_deleted_photos">Gelöschte Fotos wiederherstellen</string>
+    <string name="photos_recovered">Fotos werden wiederhergestellt…</string>
+
+    <!-- DIALOG -->
+    <string name="please_wait">Bitte warten</string>
+
+    <string name="deleted_photos_were_found">Gelöschte Fotos wurden gefunden</string>
+    <string name="recover_your_lost_photos">Stellen Sie jetzt Ihre gelöschten Fotos wieder her.</string>
+    <string name="recover_all">ALLE WIEDERHERSTELLEN</string>
+
+    <!-- RESULT -->
+    <string name="deleted_files">Gelöschte Dateien</string>
+    <string name="recover">Wiederherstellen</string>
+    <string name="recover_formatted">Wiederherstellen (%1$s)</string>
+    <string name="list_is_empty">Liste ist leer. Bitte wählen Sie eine Datei aus.</string>
+    <string name="deleted">Gelöscht</string>
+    <string name="file_size_kb">%1$s kB</string>
+    <string name="deleted_images">Gelöschte Bilder</string>
+    <string name="gallery_images">Galerie</string>
+    <string name="all_deleted_images">Gelöschte Bilder</string>
+
+    <string name="trash">Papierkorb</string>
+    <string name="deleted_box">Gelöscht</string>
+
+    <string name="restore_photo">Foto wiederherstellen</string>
+    <string name="delete_photo">Foto löschen</string>
+    <string name="could_not_delete">Das Foto konnte nicht gelöscht werden.</string>
+
+    <string name="a_few_minutes">Dieser Prozess kann einige Minuten dauern.\nBitte warten…</string>
+
+    <string name="format_founded">+%1$d</string>
+
+    <!-- SUBSCRIPTION -->
+    <string name="get_premium">Premium erhalten</string>
+    <string name="weekly_title">Wöchentliches Premium</string>
+    <string name="yearly_title">Jährliches Premium</string>
+    <string name="monthly_title">Monatliches Premium</string>
+    <string name="lifetime_title">Lebenslanges Premium</string>
+    <string name="week_after_price">/ Woche</string>
+    <string name="month_after_price">/ Monat</string>
+    <string name="year_after_price">/ Jahr</string>
+    <string name="lifetime_after_price">Lebenslang</string>
+    <string name="yearly">Jährlich</string>
+    <string name="year">Jahr</string>
+    <string name="month">Monat</string>
+    <string name="upgrade_to_pro">Auf Pro upgraden.</string>
+    <string name="get_access_to_all_premium_features">Erhalten Sie Zugang zu allen Premium-Funktionen.</string>
+    <string name="unlock_all_properties">Alle Eigenschaften freischalten.</string>
+    <string name="ads_free_using">Nutzung ohne Werbung.</string>
+    <string name="subs_continue">Fortsetzen</string>
+    <string name="subs_continue_free_trial">3-tägige kostenlose Testversion starten</string>
+    <string name="no_connection">Keine Verbindung</string>
+    <string name="check_internet">Bitte überprüfen Sie Ihre Internetverbindung</string>
+    <string name="try_again">Erneut versuchen</string>
+    <string name="auto_renewable_text">Das Abonnement wird automatisch erneuert. Sie können Ihr Abonnement jederzeit kündigen.</string>
+    <string name="privacy_policy"><u>Datenschutzrichtlinie</u></string>
+    <string name="terms_of_use"><u>Nutzungsbedingungen</u></string>
+    <string name="yearly_free_trial_period">Nach der kostenlosen Testphase werden Ihnen %1$s/Jahr berechnet, es sei denn, Sie kündigen vor Ablauf der Probezeit.</string>
+    <string name="monthly_free_trial_period">Nach der kostenlosen Testphase werden Ihnen %1$s/Monat berechnet, es sei denn, Sie kündigen vor Ablauf der Probezeit.</string>
+    <string name="weekly_free_trial_period">Nach der kostenlosen Testphase werden Ihnen %1$s/Woche berechnet, es sei denn, Sie kündigen vor Ablauf der Probezeit.</string>
+    <string name="lifetime_free_trial_period">Nach der kostenlosen Testphase werden Ihnen %1$s berechnet, es sei denn, Sie kündigen vor Ablauf der Probezeit.</string>
+
+    <!-- Exception Errors -->
+    <string name="context_finder_error">Berechtigungen sollten im Kontext einer Aktivität aufgerufen werden</string>
+
+    <!-- DIALOG -->
+    <string name="loading">Gelöschte Fotos werden abgerufen…</string>
+    <string name="restore_dialog_title">Ausgewähltes Foto wurde wiederhergestellt</string>
+    <string name="restore_dialog_text">Sie können das wiederhergestellte Foto in Ihrer Galerie oder im Dateipfad /DCIM/Reco_Images sehen.</string>
+    <string name="check">Überprüfen</string>
+    <string name="delete_dialog_title">Ausgewähltes Foto wird aus den Dateien gelöscht</string>
+    <string name="delete_dialog_text">Sind Sie sicher, dass Sie löschen möchten?</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="delete">Löschen</string>
+    <string name="close">Schließen</string>
+    <string name="gallery">Galerie</string>
+    <string name="weekly">Wöchentlich</string>
+    <string name="monthly">Monatlich</string>
+    <string name="lifetime">Lebenslang</string>
+    <string name="first_year">/erstes Jahr</string>
+    <string name="okk">OK</string>
+    <string name="cancel_button">Abbrechen</string>
+    <string name="go_to_settings">Einstellungen</string>
+    <string name="allow">Erlauben</string>
+
+    <string name="read_write_permission_title">Berechtigung erforderlich</string>
+    <string name="read_write_permission_description">Ihre Erlaubnis ist erforderlich, um auf die Dateien zuzugreifen. Wenn das Berechtigungsdialogfeld nicht erscheint, müssen Sie die Berechtigung in den App-Einstellungen erteilen.</string>
+
+    <string name="save_permission">Sie müssen die Berechtigung erteilen, damit wir das Foto, das Sie wiederherstellen möchten, in Ihren Dateien speichern können.</string>
+
+    <!-- Folder Permission Dialog -->
+    <string name="folder_permission_title">Berechtigung erforderlich</string>
+    <string name="folder_permission_button">DIESEN ORDNER VERWENDEN</string>
+    <string name="folder_permission_description">Um auf gelöschte Dateien zuzugreifen, klicken Sie auf den Bildschirm\n<font color='#FFFFFF'>DIESEN ORDNER VERWENDEN</font>\nKnopf, der erscheint.</string>
+    <string name="folder_permission_allow">Fortfahren</string>
+
+    <string name="documents">Dokumente</string>
+    <string name="there_are_no_photos_in_your_gallery">Es gibt keine Fotos in Ihrer Galerie.</string>
+    <string name="there_are_no_photos_in_your_trash">Es gibt keine Fotos in Ihrem Papierkorb.</string>
+    <string name="watch_ads">Anzeigen anschauen</string>
+    <string name="watch_ads_exhausted">Limit von 3 Anzeigen/Tag erreicht.</string>
+    <string name="loading_ads">Anzeigen werden geladen…</string>
+    <string name="or">oder</string>
+    <string name="files">Dateien</string>
+    <string name="images">Bilder</string>
+
+    <!-- Billing Error Messages-->
+    <string name="billing_service_unavailable">Der Abrechnungsdienst ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.</string>
+    <string name="error_occured">Ein Fehler ist bei der Verarbeitung Ihrer Anfrage aufgetreten. Bitte versuchen Sie es später erneut.</string>
+    <string name="not_supported">Diese Funktion wird auf Ihrem Gerät nicht unterstützt.</string>
+    <string name="already_owned">Sie besitzen diesen Artikel bereits.</string>
+    <string name="do_not_own">Sie besitzen diesen Artikel nicht.</string>
+    <string name="item_not_available">Dieser Artikel ist nicht zum Kauf verfügbar.</string>
+    <string name="service_disconnected">Der Abrechnungsdienst wurde getrennt. Bitte versuchen Sie es später erneut.</string>
+    <string name="service_timed_out">Der Abrechnungsdienst hat die Zeitüberschreitung erreicht. Bitte versuchen Sie es später erneut.</string>
+    <string name="service_unavailable">Der Abrechnungsdienst ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.</string>
+    <string name="purchase_cancelled">Der Kauf wurde abgebrochen.</string>
+    <string name="unknown_error">Ein unbekannter Fehler ist aufgetreten.</string>
+
+</resources>

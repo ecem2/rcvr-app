@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.adentech.rcvr.model.FileModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardGallery"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#8CE5F1"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/soundIconImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/margin_6"
+                android:background="@drawable/bg_audio_list"
+                android:src="@drawable/ic_music_list"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{item.fileName}"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginStart="@dimen/margin_16"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/fileSizeTV"
+                app:layout_constraintStart_toEndOf="@+id/cardGallery"
+                tools:text="aaaaaaaa"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fileSizeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_2"
+                android:fontFamily="@font/redhatdisplay_bold"
+                android:text="@{item.fileSize}"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginStart="@dimen/margin_16"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_12"
+                app:autoSizeMaxTextSize="@dimen/text_size_13"
+                app:autoSizeMinTextSize="@dimen/text_size_11"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:layout_constraintStart_toEndOf="@+id/cardGallery"
+                tools:text="544kb" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

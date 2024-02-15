@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recupero</string>
+
+    <!-- ONBOARD -->
+    <string name="get_back_the_images_you_lost">Recupera le immagini che hai perso.</string>
+    <string name="recover_deleted_photos_from_your_gallery_with_reco">Recupera le foto cancellate dalla tua galleria con Reco.</string>
+    <string name="get_started">Inizia</string>
+    <string name="exit_message">Si prega di cliccare di nuovo su INDIETRO per uscire</string>
+    <string name="videos">Video</string>
+    <string name="deleted_videos_were_found">Trovati video eliminati</string>
+    <string name="videos_recovered">Video recuperati</string>
+    <string name="there_are_no_videos_in_your_trash">Non ci sono video nel tuo cestino</string>
+    <string name="restore_audio">Ripristina l\'audio</string>
+    <string name="restore_video">Ripristina video</string>
+    <string name="clear_large_media_files">Cancella file multimediali di grandi dimensioni</string>
+    <string name="restore_dialog_audio_title">Ripristina il titolo audio</string>
+    <string name="restore_dialog_audio_text">Ripristina il testo audio</string>
+    <string name="audios">Audio</string>
+    <string name="there_are_no_audio_in_your_trash">Non ci sono audio nel cestino</string>
+    <string name="restore_dialog_video_text">Ripristina il testo del video</string>
+    <string name="restore_dialog_video_title">Ripristina il titolo video</string>
+    <string name="you_can_delete_duplicated_photos_and_videos">Puoi eliminare foto e video duplicati</string>
+
+    <string name="remove_duplicates">Rimuovi duplicati</string>
+    <string name="year_p"> $99.99/ Anno</string>
+    <string name="month_p"> $99.99/ Mese</string>
+    <string name="no_commitment_cancel_anytime">Nessun impegno, annulla in qualsiasi momento</string>
+
+
+
+
+
+    <!-- HOME -->
+    <string name="scan">Scansione</string>
+    <string name="let_s_pick_the_best_choice">Scegliamo la migliore opzione.</string>
+    <string name="free_scan">Scansione Gratuita</string>
+    <string name="normal_scan">Scansione Normale</string>
+    <string name="one_click_quick_recovery">Recupero rapido con un clic</string>
+    <string name="start_scanning">&#160;&#160;&#160;&#160;&#160;&#160;Inizia Scansione 🔥</string>
+    <string name="premium_scan">Scansione Premium</string>
+    <string name="deep_scan">Scansione Profonda</string>
+    <string name="unlock_premium_features_for_the_deep_scan">Sblocca le funzionalità premium per la scansione profonda.</string>
+
+    <!-- SCAN -->
+    <string name="photo_recover">Recupero Foto</string>
+    <string name="video_recover">Recupero Video</string>
+    <string name="audio_recover">Recupero dell\'audio</string>
+    <string name="file_recover">Recupero file</string>
+    <string name="recover_deleted_videos">Recupera i video cancellati</string>
+    <string name="recover_deleted_audios">Recupera gli audio cancellati</string>
+    <string name="recover_deleted_files">Recupera i file cancellati</string>
+    <string name="restore_your_data">Ripristina i tuoi dati</string>
+    <string name="internal">Interna</string>
+    <string name="storage">Magazzinaggio</string>
+
+    <string name="scanning_">Scansione in corso…</string>
+    <string name="completed">COMPLETATO</string>
+    <string name="stop_scanning">Interrompi Scansione</string>
+    <string name="recover_deleted_photos">Recupera Foto Cancellate</string>
+    <string name="photos_recovered">Foto in fase di recupero…</string>
+
+    <!-- DIALOG -->
+    <string name="please_wait">Attendere prego</string>
+
+    <string name="deleted_photos_were_found">Trovate foto cancellate</string>
+    <string name="recover_your_lost_photos">Recupera subito le tue foto cancellate.</string>
+    <string name="recover_all">RECUPERA TUTTO</string>
+
+    <!-- RESULT -->
+    <string name="deleted_files">File Cancellati</string>
+    <string name="recover">Recupera</string>
+    <string name="recover_formatted">Recupera (%1$s)</string>
+    <string name="list_is_empty">La lista è vuota. Si prega di scegliere un file.</string>
+    <string name="deleted">Cancellato</string>
+    <string name="file_size_kb">%1$s kB</string>
+    <string name="deleted_images">Immagini Cancellate</string>
+    <string name="gallery_images">Galleria</string>
+    <string name="all_deleted_images">Immagini Cancellate</string>
+
+    <string name="trash">Cestino</string>
+    <string name="deleted_box">Cancellato</string>
+
+    <string name="restore_photo">Ripristina Foto</string>
+    <string name="delete_photo">Elimina Foto</string>
+    <string name="could_not_delete">Impossibile eliminare la foto.</string>
+
+    <string name="a_few_minutes">Questo processo potrebbe richiedere alcuni minuti.\nAttendere prego…</string>
+
+    <string name="format_founded">+%1$d</string>
+
+    <!-- SUBSCRIPTION -->
+    <string name="get_premium">Ottieni Premium</string>
+    <string name="weekly_title">Premium Settimanale</string>
+    <string name="yearly_title">Premium Annuale</string>
+    <string name="monthly_title">Premium Mensile</string>
+    <string name="lifetime_title">Premium A Vita</string>
+    <string name="week_after_price">/ settimana</string>
+    <string name="month_after_price">/ mese</string>
+    <string name="year_after_price">/ anno</string>
+    <string name="lifetime_after_price">a vita</string>
+    <string name="yearly">Annuale</string>
+    <string name="year">Anno</string>
+    <string name="month">Mese</string>
+    <string name="upgrade_to_pro">Passa a Pro.</string>
+    <string name="get_access_to_all_premium_features">Accedi a tutte le funzionalità premium.</string>
+    <string name="unlock_all_properties">Sblocca tutte le proprietà.</string>
+    <string name="ads_free_using">Uso senza pubblicità.</string>
+    <string name="subs_continue">Continua</string>
+    <string name="subs_continue_free_trial">Inizia la prova gratuita di 3 giorni</string>
+    <string name="no_connection">Nessuna Connessione</string>
+    <string name="check_internet">Si prega di controllare la connessione internet</string>
+    <string name="try_again">Riprova</string>
+    <string name="auto_renewable_text">L\'abbonamento si rinnova automaticamente. Puoi cancellare l\'abbonamento in qualsiasi momento.</string>
+    <string name="privacy_policy"><u>Politica sulla Privacy</u></string>
+    <string name="terms_of_use"><u>Termini di Uso</u></string>
+    <string name="yearly_free_trial_period">Dopo il periodo di prova gratuito, verrà addebitato %1$s/anno a meno che non si annulli prima della scadenza della prova.</string>
+    <string name="monthly_free_trial_period">Dopo il periodo di prova gratuito, verrà addebitato %1$s/mese a meno che non si annulli prima della scadenza della prova.</string>
+    <string name="weekly_free_trial_period">Dopo il periodo di prova gratuito, verrà addebitato %1$s/settimana a meno che non si annulli prima della scadenza della prova.</string>
+    <string name="lifetime_free_trial_period">Dopo il periodo di prova gratuito, verrà addebitato %1$s a meno che non si annulli prima della scadenza della prova.</string>
+
+    <!-- Exception Errors -->
+    <string name="context_finder_error">I permessi devono essere richiesti nel contesto di un\'Attività</string>
+
+    <!-- DIALOG -->
+    <string name="loading">Recupero Foto Cancellate in corso…</string>
+    <string name="restore_dialog_title">La foto selezionata è stata ripristinata</string>
+    <string name="restore_dialog_text">Puoi vedere la foto ripristinata nella tua galleria o nel percorso file /DCIM/Reco_Images.</string>
+    <string name="check">Controlla</string>
+    <string name="delete_dialog_title">La foto selezionata verrà eliminata dai file</string>
+    <string name="delete_dialog_text">Sei sicuro di voler eliminare?</string>
+    <string name="cancel">Annulla</string>
+    <string name="delete">Elimina</string>
+    <string name="close">Chiudi</string>
+    <string name="gallery">Galleria</string>
+    <string name="weekly">Settimanale</string>
+    <string name="monthly">Mensile</string>
+    <string name="lifetime">A Vita</string>
+    <string name="first_year">/primo anno</string>
+    <string name="okk">OK</string>
+    <string name="cancel_button">Annulla</string>
+    <string name="go_to_settings">Impostazioni</string>
+    <string name="allow">Permetti</string>
+
+    <string name="read_write_permission_title">Permesso Richiesto</string>
+    <string name="read_write_permission_description">Il tuo permesso è richiesto per accedere ai file. Se non appare il dialogo dei permessi, devi concederlo dalle impostazioni dell\'app.</string>
+
+    <string name="save_permission">Devi dare il permesso affinché possiamo salvare la foto che desideri recuperare nei tuoi file.</string>
+
+    <!-- Folder Permission Dialog -->
+    <string name="folder_permission_title">Permesso Richiesto</string>
+    <string name="folder_permission_button">USA QUESTA CARTELLA</string>
+    <string name="folder_permission_description">Per accedere ai file eliminati, clicca sul pulsante\n<font color='#FFFFFF'>USA QUESTA CARTELLA</font>\nsullo schermo che appare.</string>
+    <string name="folder_permission_allow">Continua</string>
+
+    <string name="documents">Documenti</string>
+    <string name="there_are_no_photos_in_your_gallery">Non ci sono foto nella tua galleria.</string>
+    <string name="there_are_no_photos_in_your_trash">Non ci sono foto nel tuo cestino.</string>
+    <string name="watch_ads">Guarda Annunci</string>
+    <string name="watch_ads_exhausted">Limite di 3 annunci/giorno raggiunto.</string>
+    <string name="loading_ads">Caricamento Annunci…</string>
+    <string name="or">o</string>
+    <string name="files">File</string>
+    <string name="images">Immagini</string>
+
+    <!-- Billing Error Messages-->
+    <string name="billing_service_unavailable">Il servizio di fatturazione è attualmente non disponibile. Per favore, riprova più tardi.</string>
+    <string name="error_occured">Si è verificato un errore durante l\'elaborazione della richiesta. Per favore, riprova più tardi.</string>
+    <string name="not_supported">Questa funzionalità non è supportata sul tuo dispositivo.</string>
+    <string name="already_owned">Possiedi già questo articolo.</string>
+    <string name="do_not_own">Non possiedi questo articolo.</string>
+    <string name="item_not_available">Questo articolo non è disponibile per l\'acquisto.</string>
+    <string name="service_disconnected">Il servizio di fatturazione è stato disconnesso. Per favore, riprova più tardi.</string>
+    <string name="service_timed_out">Il servizio di fatturazione ha superato il tempo di attesa. Per favore, riprova più tardi.</string>
+    <string name="service_unavailable">Il servizio di fatturazione è attualmente non disponibile. Per favore, riprova più tardi.</string>
+    <string name="purchase_cancelled">L\'acquisto è stato annullato.</string>
+    <string name="unknown_error">Si è verificato un errore sconosciuto.</string>
+
+</resources>

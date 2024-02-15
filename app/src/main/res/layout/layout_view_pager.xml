@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_premium"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toTopOf="@+id/tv_premium_title"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_premium_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/exo_bold"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_28"
+            android:layout_marginTop="@dimen/margin_46"
+            app:layout_constraintBottom_toTopOf="@+id/tv_premium_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_premium"
+            android:text="@string/remove_duplicates" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_premium_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/margin_12"
+            android:fontFamily="@font/exo_medium"
+            android:text="@string/you_can_delete_duplicated_photos_and_videos"
+            android:textAllCaps="false"
+            android:textColor="#959A9F"
+            android:textSize="@dimen/text_size_18"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_premium_title"
+            app:autoSizeMaxTextSize="@dimen/text_size_20"
+            app:autoSizeMinTextSize="@dimen/text_size_16"
+            app:autoSizeTextType="uniform" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

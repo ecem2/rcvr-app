@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialogResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_shadow">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top_oval_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_trash_can"
+            android:elevation="10dp"
+            android:src="@mipmap/ic_trash_can"
+            app:layout_constraintBottom_toTopOf="@+id/gl_oval_image"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gl_top_oval_image" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_oval_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/gl_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gl_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_blue_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/dialog_top"
+                    app:layout_constraintBottom_toTopOf="@+id/gl_middle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.2" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="top"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gl_middle">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dialog_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:fontFamily="@font/redhatdisplay_semi_bold"
+                        android:gravity="center"
+                        android:text="@string/deleted_photos_were_found"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_24"
+                        app:autoSizeMaxTextSize="@dimen/text_size_28"
+                        app:autoSizeMinTextSize="@dimen/text_size_20"
+                        app:autoSizeTextType="uniform" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dialog_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:fontFamily="@font/redhatdisplay_semi_bold"
+                        android:gravity="center"
+                        android:text="@string/deleted_photos_were_found"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16"
+                        app:autoSizeMaxTextSize="@dimen/text_size_20"
+                        app:autoSizeMinTextSize="@dimen/text_size_12"
+                        app:autoSizeTextType="uniform" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_restore"
+                        android:layout_width="match_parent"
+                        android:layout_height="62dp"
+                        android:layout_marginStart="@dimen/margin_24"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:layout_marginEnd="@dimen/margin_24"
+                        android:background="@drawable/bg_dialog_button"
+                        android:fontFamily="@font/redhatdisplay_semi_bold"
+                        android:maxHeight="60dp"
+                        android:text="@string/recover_all"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16"
+                        app:autoSizeMaxTextSize="@dimen/text_size_20"
+                        app:autoSizeMinTextSize="@dimen/text_size_12"
+                        app:autoSizeTextType="uniform" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_restorew"
+                        android:layout_width="match_parent"
+                        android:layout_height="62dp"
+                        android:layout_marginStart="@dimen/margin_24"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:layout_marginEnd="@dimen/margin_24"
+                        android:background="@drawable/bg_dialog_button"
+                        android:fontFamily="@font/redhatdisplay_semi_bold"
+                        android:maxHeight="60dp"
+                        android:text="@string/recover_all"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16"
+                        app:autoSizeMaxTextSize="@dimen/text_size_20"
+                        app:autoSizeMinTextSize="@dimen/text_size_12"
+                        app:autoSizeTextType="uniform" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.72" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

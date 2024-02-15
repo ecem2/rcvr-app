@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.adentech.rcvr.model.FileModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#8CE5F1"
+            android:layout_marginTop="@dimen/margin_6"
+            android:layout_marginStart="@dimen/margin_6"
+            app:layout_constraintEnd_toStartOf="@+id/tv_audio_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/soundIconImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_6"
+                    android:background="@drawable/bg_audio_list"
+                    android:src="@drawable/ic_music_list"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_audio_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/audioSizeTV"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/exo_bold"
+            android:gravity="center|start"
+            android:text="@{item.fileName}"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            app:autoSizeMaxTextSize="@dimen/text_size_16"
+            app:autoSizeMinTextSize="@dimen/text_size_12"
+            app:autoSizeTextType="uniform"
+            android:layout_marginTop="@dimen/margin_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintBottom_toTopOf="@+id/audioSizeTV"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sample Audio.mp3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/audioSizeTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/exo_bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    app:autoSizeMaxTextSize="@dimen/text_size_16"
+                    app:autoSizeMinTextSize="@dimen/text_size_12"
+                    app:autoSizeTextType="uniform"
+                    android:text="@{item.fileExtension}"
+                    android:layout_marginStart="@dimen/margin_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cardView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_audio_name"
+                    tools:text="mp3"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:gravity="center|start"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

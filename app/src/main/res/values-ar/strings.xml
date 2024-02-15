@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">استرداد</string>
+
+    <!-- ONBOARD -->
+    <string name="get_back_the_images_you_lost">استعد الصور التي فقدتها.</string>
+    <string name="recover_deleted_photos_from_your_gallery_with_reco">استعد الصور المحذوفة من معرضك مع Reco.</string>
+    <string name="get_started">ابدأ</string>
+    <string name="exit_message">الرجاء النقر على الرجوع مرة أخرى للخروج</string>
+    <string name="videos">أشرطة فيديو</string>
+    <string name="deleted_videos_were_found">تم العثور على مقاطع الفيديو المحذوفة</string>
+    <string name="videos_recovered">تم استرداد مقاطع الفيديو</string>
+    <string name="there_are_no_videos_in_your_trash">لا توجد مقاطع فيديو في سلة المهملات</string>
+    <string name="restore_audio">استعادة الصوت</string>
+    <string name="restore_video">Rاستعادة الفيديو</string>
+    <string name="clear_large_media_files">مسح ملفات الوسائط الكبيرة</string>
+    <string name="restore_dialog_audio_title">استعادة عنوان الصوت</string>
+    <string name="restore_dialog_audio_text">استعادة النص الصوتي</string>
+    <string name="audios">صوتيات</string>
+    <string name="there_are_no_audio_in_your_trash">لا يوجد أي صوت في سلة المهملات الخاصة بك</string>
+    <string name="restore_dialog_video_text">استعادة نص الفيديو</string>
+    <string name="restore_dialog_video_title">استعادة عنوان الفيديو</string>
+    <string name="you_can_delete_duplicated_photos_and_videos">يمكنك حذف الصور ومقاطع الفيديو المكررة</string>
+    <string name="remove_duplicates">إزالة التكرارات</string>
+    <string name="year_p"> $99.99/ سنة</string>
+    <string name="month_p"> $99.99/ Mês</string>
+    <string name="no_commitment_cancel_anytime">لا يوجد التزام، قم بالإلغاء في أي وقت</string>
+
+
+
+
+    <!-- HOME -->
+    <string name="scan">مسح</string>
+    <string name="let_s_pick_the_best_choice">لنختر الخيار الأفضل.</string>
+    <string name="free_scan">مسح مجاني</string>
+    <string name="normal_scan">مسح عادي</string>
+    <string name="one_click_quick_recovery">استرداد سريع بنقرة واحدة</string>
+    <string name="start_scanning">&#160;&#160;&#160;&#160;&#160;&#160;ابدأ المسح 🔥</string>
+    <string name="premium_scan">مسح مميز</string>
+    <string name="deep_scan">مسح عميق</string>
+    <string name="unlock_premium_features_for_the_deep_scan">افتح الميزات المميزة للمسح العميق.</string>
+
+    <!-- SCAN -->
+    <string name="photo_recover">استرداد الصورة</string>
+    <string name="scanning_">جارٍ المسح…</string>
+    <string name="video_recover">استعادة الفيديو</string>
+    <string name="audio_recover">استعادة الصوت</string>
+    <string name="file_recover">استرداد الملفات</string>
+    <string name="recover_deleted_videos">استرجاع الفيديوهات المحذوفة</string>
+    <string name="recover_deleted_audios">استعادة الصوتيات المحذوفة</string>
+    <string name="recover_deleted_files">استعادة الصوتيات المحذوفة</string>
+    <string name="completed">مكتمل</string>
+    <string name="restore_your_data">استعادة البيانات الخاصة بك</string>
+    <string name="internal">داخلي</string>
+    <string name="storage">تخزين</string>
+
+    <string name="stop_scanning">إيقاف المسح</string>
+    <string name="recover_deleted_photos">استرد الصور المحذوفة</string>
+    <string name="photos_recovered">يتم استرداد الصور…</string>
+
+    <!-- DIALOG -->
+    <string name="please_wait">يرجى الانتظار</string>
+
+    <string name="deleted_photos_were_found">تم العثور على صور محذوفة</string>
+    <string name="recover_your_lost_photos">استعد صورك المحذوفة الآن.</string>
+    <string name="recover_all">استرد الكل</string>
+
+    <!-- RESULT -->
+    <string name="deleted_files">الملفات المحذوفة</string>
+    <string name="recover">استرداد</string>
+    <string name="recover_formatted">استرداد (%1$s)</string>
+    <string name="list_is_empty">القائمة فارغة. يرجى اختيار ملف.</string>
+    <string name="deleted">محذوف</string>
+    <string name="file_size_kb">%1$s كيلوبايت</string>
+    <string name="deleted_images">صور محذوفة</string>
+    <string name="gallery_images">معرض الصور</string>
+    <string name="all_deleted_images">صور محذوفة</string>
+
+    <string name="trash">سلة المهملات</string>
+    <string name="deleted_box">محذوف</string>
+
+    <string name="restore_photo">استعادة الصورة</string>
+    <string name="delete_photo">حذف الصورة</string>
+    <string name="could_not_delete">تعذر حذف الصورة.</string>
+
+    <string name="a_few_minutes">قد يستغرق هذا الإجراء بضع دقائق.\nيرجى الانتظار…</string>
+
+    <string name="format_founded">+%1$d</string>
+
+    <!-- SUBSCRIPTION -->
+    <string name="get_premium">احصل على الإصدار المميز</string>
+    <string name="weekly_title">الإصدار المميز الأسبوعي</string>
+    <string name="yearly_title">الإصدار المميز السنوي</string>
+    <string name="monthly_title">الإصدار المميز الشهري</string>
+    <string name="lifetime_title">الإصدار المميز مدى الحياة</string>
+    <string name="week_after_price">/ أسبوع</string>
+    <string name="month_after_price">/ شهر</string>
+    <string name="year_after_price">/ سنة</string>
+    <string name="lifetime_after_price">مدى الحياة</string>
+    <string name="yearly">سنوي</string>
+    <string name="year">سنة</string>
+    <string name="month">شهر</string>
+    <string name="upgrade_to_pro">ترقية إلى الاحترافية.</string>
+    <string name="get_access_to_all_premium_features">احصل على الوصول إلى جميع الميزات المميزة.</string>
+    <string name="unlock_all_properties">افتح جميع الخصائص.</string>
+    <string name="ads_free_using">استخدام بدون إعلانات.</string>
+    <string name="subs_continue">استمر</string>
+    <string name="subs_continue_free_trial">ابدأ التجربة المجانية لمدة 3 أيام</string>
+    <string name="no_connection">لا يوجد اتصال</string>
+    <string name="check_internet">يرجى التحقق من اتصالك بالإنترنت</string>
+    <string name="try_again">حاول مجددًا</string>
+    <string name="auto_renewable_text">الاشتراك قابل للتجديد تلقائيًا. يمكنك إلغاء اشتراكك في أي وقت.</string>
+    <string name="privacy_policy"><u>سياسة الخصوصية</u></string>
+    <string name="terms_of_use"><u>شروط الاستخدام</u></string>
+    <string name="yearly_free_trial_period">بعد فترة التجربة المجانية، سيتم فرض رسوم عليك بقيمة %1$s/سنة إلا إذا قمت بالإلغاء قبل انتهاء التجربة.</string>
+    <string name="monthly_free_trial_period">بعد فترة التجربة المجانية، سيتم فرض رسوم عليك بقيمة %1$s/شهر إلا إذا قمت بالإلغاء قبل انتهاء التجربة.</string>
+    <string name="weekly_free_trial_period">بعد فترة التجربة المجانية، سيتم فرض رسوم عليك بقيمة %1$s/أسبوع إلا إذا قمت بالإلغاء قبل انتهاء التجربة.</string>
+    <string name="lifetime_free_trial_period">بعد فترة التجربة المجانية، سيتم فرض رسوم عليك بقيمة %1$s إلا إذا قمت بالإلغاء قبل انتهاء التجربة.</string>
+
+    <!-- Exception Errors -->
+    <string name="context_finder_error">يجب طلب الأذونات في سياق نشاط</string>
+
+    <!-- DIALOG -->
+    <string name="loading">جارٍ استرداد الصور المحذوفة…</string>
+    <string name="restore_dialog_title">تمت استعادة الصورة المحددة</string>
+    <string name="restore_dialog_text">يمكنك رؤية الصورة المستردة في معرضك أو في مسار الملف /DCIM/Reco_Images.</string>
+    <string name="check">تحقق</string>
+    <string name="delete_dialog_title">سيتم حذف الصورة المحددة من الملفات</string>
+    <string name="delete_dialog_text">هل أنت متأكد أنك تريد الحذف؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="delete">حذف</string>
+    <string name="close">إغلاق</string>
+    <string name="gallery">معرض الصور</string>
+    <string name="weekly">أسبوعي</string>
+    <string name="monthly">شهري</string>
+    <string name="lifetime">مدى الحياة</string>
+    <string name="first_year">/السنة الأولى</string>
+    <string name="okk">موافق</string>
+    <string name="cancel_button">إلغاء</string>
+    <string name="go_to_settings">الإعدادات</string>
+    <string name="allow">السماح</string>
+
+    <string name="read_write_permission_title">مطلوب إذن</string>
+    <string name="read_write_permission_description">مطلوب إذنك للوصول إلى الملفات. إذا لم تظهر نافذة الحوار للإذن، يلزمك منح الإذن من إعدادات التطبيق.</string>
+
+    <string name="save_permission">يجب منح الإذن حتى نتمكن من حفظ الصورة التي ترغب في استردادها في ملفاتك.</string>
+
+    <!-- Folder Permission Dialog -->
+    <string name="folder_permission_title">مطلوب إذن</string>
+    <string name="folder_permission_button">استخدم هذا المجلد</string>
+    <string name="folder_permission_description">للوصول إلى الملفات المحذوفة، انقر على زر\n<font color='#FFFFFF'>استخدم هذا المجلد</font>\nفي الشاشة التي تظهر.</string>
+    <string name="folder_permission_allow">استمر</string>
+
+    <string name="documents">المستندات</string>
+    <string name="there_are_no_photos_in_your_gallery">لا توجد صور في معرضك.</string>
+    <string name="there_are_no_photos_in_your_trash">لا توجد صور في سلة المهملات.</string>
+    <string name="watch_ads">مشاهدة الإعلانات</string>
+    <string name="watch_ads_exhausted">تم الوصول إلى الحد الأقصى من 3 إعلانات/يوم.</string>
+    <string name="loading_ads">جارٍ تحميل الإعلانات…</string>
+    <string name="or">أو</string>
+    <string name="files">الملفات</string>
+    <string name="images">الصور</string>
+
+    <!-- Billing Error Messages-->
+    <string name="billing_service_unavailable">خدمة الفوترة غير متاحة حالياً. يرجى المحاولة لاحقاً.</string>
+    <string name="error_occured">حدث خطأ أثناء معالجة الطلب. يرجى المحاولة لاحقاً.</string>
+    <string name="not_supported">هذه الميزة غير مدعومة على جهازك.</string>
+    <string name="already_owned">أنت تمتلك هذا العنصر بالفعل.</string>
+    <string name="do_not_own">أنت لا تمتلك هذا العنصر.</string>
+    <string name="item_not_available">هذا العنصر غير متاح للشراء.</string>
+    <string name="service_disconnected">تم قطع خدمة الفوترة. يرجى المحاولة لاحقاً.</string>
+    <string name="service_timed_out">انتهت مدة خدمة الفوترة. يرجى المحاولة لاحقاً.</string>
+    <string name="service_unavailable">خدمة الفوترة غير متاحة حالياً. يرجى المحاولة لاحقاً.</string>
+    <string name="purchase_cancelled">تم إلغاء الشراء.</string>
+    <string name="unknown_error">حدث خطأ غير معروف.</string>
+
+</resources>

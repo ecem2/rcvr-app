@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:layout_margin">@dimen/margin_10</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ToolBarTheme"  parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Widget.AppCompat.SeekBar.Discrete" parent="Widget.AppCompat.SeekBar">
+        <item name="colorControlNormal">@color/colorSeekBarNormal</item>
+        <item name="colorControlActivated">@color/colorSeekBarActivated</item>
+    </style>
+</resources>

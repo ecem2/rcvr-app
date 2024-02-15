@@ -1,0 +1,174 @@
+<resources>
+    <string name="app_name">Recovery</string>
+
+    <!-- ONBOARD -->
+    <string name="get_back_the_images_you_lost">Get Back the Images you Lost.</string>
+    <string name="recover_deleted_photos_from_your_gallery_with_reco">Recover deleted photos from your gallery with Reco.</string>
+    <string name="get_started">Get Started</string>
+    <string name="exit_message">Please click BACK again to exit</string>
+    <string name="videos">Videos</string>
+    <string name="deleted_videos_were_found">Deleted videos found</string>
+    <string name="videos_recovered">Videos recovered</string>
+    <string name="there_are_no_videos_in_your_trash">There are no videos in your trash</string>
+    <string name="restore_audio">Restore audio</string>
+    <string name="restore_video">Restore video</string>
+    <string name="clear_large_media_files">Clear large media files</string>
+    <string name="restore_dialog_audio_title">Restore audio title</string>
+    <string name="restore_dialog_audio_text">Restore audio text</string>
+    <string name="audios">Audios</string>
+    <string name="there_are_no_audio_in_your_trash">There are no audio in your trash</string>
+    <string name="restore_dialog_video_text">Restore video text</string>
+    <string name="restore_dialog_video_title">Restore video title</string>
+    <string name="you_can_delete_duplicated_photos_and_videos">You can delete duplicated\nphotos and videos</string>
+    <string name="remove_duplicates">Remove Duplicates</string>
+    <string name="year_p"> $99.99/ Year</string>
+    <string name="month_p"> $99.99/ Month</string>
+    <string name="no_commitment_cancel_anytime">No commitment, cancel anytime</string>
+
+
+    <!-- HOME -->
+    <string name="scan">Scan</string>
+    <string name="let_s_pick_the_best_choice">Let\'s Pick the Best Choice.</string>
+    <string name="free_scan">Free Scan</string>
+    <string name="normal_scan">Normal scan</string>
+    <string name="one_click_quick_recovery">One click quick recovery</string>
+    <string name="start_scanning">&#160;&#160;&#160;&#160;&#160;&#160;Start Scanning 🔥</string>
+    <string name="premium_scan">Premium Scan</string>
+    <string name="deep_scan">Deep Scan</string>
+    <string name="unlock_premium_features_for_the_deep_scan">Unlock premium features for the deep scan.</string>
+
+    <!-- SCAN -->
+    <string name="photo_recover">Photo Recovery</string>
+    <string name="video_recover">Video Recovery</string>
+    <string name="audio_recover">Audio Recovery</string>
+    <string name="file_recover">File Recovery</string>
+    <string name="restore_your_data">Restore Your Data</string>
+    <string name="scanning_">Scanning…</string>
+    <string name="completed">COMPLETED</string>
+    <string name="stop_scanning">Stop Scanning</string>
+    <string name="recover_deleted_photos">Recover deleted photos</string>
+    <string name="recover_deleted_videos">Recover deleted videos</string>
+    <string name="recover_deleted_audios">Recover deleted audios</string>
+    <string name="recover_deleted_files">Recover deleted files</string>
+    <string name="photos_recovered">Photos are getting recovered…</string>
+    <string name="internal">Internal</string>
+    <string name="storage">Storage</string>
+
+
+    <!-- DIALOG -->
+    <string name="please_wait">Please wait</string>
+
+    <string name="deleted_photos_were_found">Deleted photos were found</string>
+    <string name="recover_your_lost_photos">Recover your deleted photos now.</string>
+    <string name="recover_all">RECOVER ALL</string>
+
+    <!-- RESULT -->
+    <string name="deleted_files">Deleted Files</string>
+    <string name="recover">Recover</string>
+    <string name="recover_formatted">Recover (%1$s)</string>
+    <string name="list_is_empty">List is empty. Please choose file.</string>
+    <string name="deleted">Deleted</string>
+    <string name="file_size_kb">%1$s kb</string>
+    <string name="deleted_images">Deleted Images</string>
+    <string name="gallery_images">Gallery</string>
+    <string name="all_deleted_images">Deleted Images</string>
+
+    <string name="trash">Trash</string>
+    <string name="deleted_box">Deleted</string>
+
+    <string name="restore_photo">Restore Photo</string>
+    <string name="delete_photo">Delete Photo</string>
+    <string name="could_not_delete">The photo could not be deleted.</string>
+
+    <string name="a_few_minutes">This process may take a few minutes.\nPlease wait…</string>
+
+    <string name="format_founded">+%1$d</string>
+
+    <!-- SUBSCRIPTION -->
+    <string name="get_premium">Get Premium</string>
+    <string name="weekly_title">Weekly Premium</string>
+    <string name="yearly_title">Yearly Premium</string>
+    <string name="monthly_title">Monthly Premium</string>
+    <string name="lifetime_title">Lifetime Premium</string>
+    <string name="week_after_price">/ week</string>
+    <string name="month_after_price">/ month</string>
+    <string name="year_after_price">/ year</string>
+    <string name="lifetime_after_price">lifetime</string>
+    <string name="yearly">Yearly</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="upgrade_to_pro">Upgrade to pro.</string>
+    <string name="get_access_to_all_premium_features">Get access to all premium features.</string>
+    <string name="unlock_all_properties">Unlock all properties.</string>
+    <string name="ads_free_using">Ads free using.</string>
+    <string name="subs_continue">Continue</string>
+    <string name="subs_continue_free_trial">Start 3-day Free Trial</string>
+    <string name="no_connection">No Connection</string>
+    <string name="check_internet">Please check your internet connection</string>
+    <string name="try_again">Try Again</string>
+    <string name="auto_renewable_text">Subscription is auto-renewable. You can cancel your subscription at any time.</string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="terms_of_use"><u>Terms of Use</u></string>
+    <string name="yearly_free_trial_period">After the free trial period you\'ll be charged %1$s/year unless you cancel before the trial expires.</string>
+    <string name="monthly_free_trial_period">After the free trial period you\'ll be charged %1$s/month unless you cancel before the trial expires.</string>
+    <string name="weekly_free_trial_period">After the free trial period you\'ll be charged %1$s/week unless you cancel before the trial expires.</string>
+    <string name="lifetime_free_trial_period">After the free trial period you\'ll be charged %1$s unless you cancel before the trial expires.</string>
+
+    <!-- Exception Errors -->
+    <string name="context_finder_error">Permissions should be called in the context of an Activity</string>
+
+    <!-- DIALOG -->
+    <string name="loading">Fetching Deleted Photos…</string>
+    <string name="restore_dialog_title">Selected photo has been restored</string>
+    <string name="restore_dialog_text">You can see the recovered photo in your gallery or in the /DCIM/Reco_Images file path.</string>
+    <string name="check">Check</string>
+    <string name="delete_dialog_title">Selected photo will be deleted from files</string>
+    <string name="delete_dialog_text">Are you sure you want to delete ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="close">Close</string>
+    <string name="gallery">Gallery</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="lifetime">Lifetime</string>
+    <string name="first_year">/first year</string>
+    <string name="okk">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="go_to_settings">Settings</string>
+    <string name="allow">Allow</string>
+
+    <string name="read_write_permission_title">Permission Required</string>
+    <string name="read_write_permission_description">Your permission is required to access the files. If the permission dialog does not appear, you need to give permission from the application settings.</string>
+
+    <string name="save_permission">You must give permission so that we can save the photo you want to recover in your files.</string>
+
+    <!-- Folder Permission Dialog -->
+    <string name="folder_permission_title">Permission Required</string>
+    <string name="folder_permission_button">USE THIS FOLDER</string>
+    <string name="folder_permission_description">To access the deleted files, click the\n<font color='#FFFFFF'>USE THIS FOLDER</font>\nbutton on the screen that appears.</string>
+    <string name="folder_permission_allow">Continue</string>
+
+    <string name="documents">Documents</string>
+    <string name="there_are_no_photos_in_your_gallery">There are no photos in your gallery.</string>
+    <string name="there_are_no_photos_in_your_trash">There are no photos in your trash.</string>
+    <string name="watch_ads">Watch Ads</string>
+    <string name="watch_ads_exhausted">3 ads/day limit reached.</string>
+    <string name="loading_ads">Loading Ads…</string>
+    <string name="or">or</string>
+    <string name="files">Files</string>
+    <string name="images">Images</string>
+
+    <!-- Billing Error Messages-->
+    <string name="billing_service_unavailable">Billing service is currently unavailable. Please try again later.</string>
+    <string name="error_occured">An error occurred while processing the request. Please try again later.</string>
+    <string name="not_supported">This feature is not supported on your device.</string>
+    <string name="already_owned">You already own this item.</string>
+    <string name="do_not_own">You do not own this item.</string>
+    <string name="item_not_available">This item is not available for purchase.</string>
+    <string name="service_disconnected">Billing service has been disconnected. Please try again later.</string>
+    <string name="service_timed_out">Billing service timed out. Please try again later.</string>
+    <string name="service_unavailable">Billing service is currently unavailable. Please try again later.</string>
+    <string name="purchase_cancelled">The purchase has been canceled.</string>
+    <string name="unknown_error">An unknown error occurred.</string>
+
+</resources>

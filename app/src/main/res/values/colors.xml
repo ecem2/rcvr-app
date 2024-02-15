@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#1685FC</color>
+    <color name="purple_500">#1685FC</color>
+    <color name="purple_700">#1685FC</color>
+    <color name="teal_200">#1685FC</color>
+    <color name="teal_700">#1685FC</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#4283F4</color>
+    <color name="transparent">#19FFFFFF</color>
+    <color name="transparent40">#66FFFFFF</color>
+    <color name="transparent42">#6BFFFFFF</color>
+
+
+    <color name="seek_bar_background">#1685FC</color>
+    <color name="seek_bar_progress">#2D34FE</color>
+    <color name="seek_bar_secondary_progress">#1685FC</color>
+    <color name="colorSeekBarNormal">#1685FC</color>
+    <color name="colorSeekBarActivated">#2D34FE</color>
+
+    <color name="border_color">#2078F9</color>
+
+    <color name="allow_button">#2C3D55</color>
+    <color name="selected_text">#FF4D67</color>
+    <color name="text_color">#DFEEFD</color>
+    <color name="black_text">#080C1E</color>
+    <color name="gray_text">#8C8E97</color>
+    <color name="scan_button_color">#FF7143</color>
+
+    <color name="dialog_shadow">#9909101D</color>
+    <color name="dialog_top_blue">#1F2078F9</color>
+
+    <color name="red_blurry_color">#FE590C</color>
+    <color name="dialog_red_text">#F92020</color>
+    <color name="dialog_second_red_text">#E90117</color>
+
+    <color name="gradient_color_start">#FDC2B4</color>
+    <color name="gradient_color_end">#FF866A</color>
+
+    <color name="bg_permission">#EDEBEB</color>
+
+    <color name="skeleton_color">#E0E0E0</color>
+
+    <color name="blurry_bg">#4D080C1E</color>
+    <color name="primary_color">#00BC70</color>
+    <color name="primary_color_opacity_10">#1A000000</color>
+    <color name="selected_non_file_bg">#33FE590C</color>
+    <color name="selected_image_bg">#992C39FE</color>
+
+    <color name="selectedTabColor">#776AFF</color>
+    <color name="unselectedTabColor">#A59CFF</color>
+
+    <color name="primary_900">#002F18</color>
+    <color name="primary_800">#014B26</color>
+    <color name="primary_700">#036333</color>
+    <color name="primary_600">#028845</color>
+    <color name="primary_500">#09AA59</color>
+    <color name="primary_400">#35D073</color>
+    <color name="primary_300">#73E29E</color>
+    <color name="primary_200">#C0F1D4</color>
+    <color name="primary_100">#F0FFF7</color>
+
+
+    <color name="gray_900">#1A1F1C</color>
+    <color name="gray_800">#2D3631</color>
+    <color name="gray_800_70">#B32D3631</color>
+    <color name="gray_700">#424D46</color>
+    <color name="gray_600">#536259</color>
+    <color name="gray_500">#6A7670</color>
+    <color name="gray_400">#9AA59F</color>
+    <color name="gray_300">#CBD1CE</color>
+    <color name="gray_200">#E7EAE8</color>
+    <color name="gray_100">#F4F6F5</color>
+
+
+    <color name="green_700">#025841</color>
+    <color name="green_600">#066E52</color>
+    <color name="green_500">#058865</color>
+    <color name="green_500_70">#B3058865</color>
+    <color name="green_400">#09AA7F</color>
+    <color name="green_300">#5FCEB2</color>
+    <color name="green_200">#A1E0CF</color>
+    <color name="green_100">#DEF5EF</color>
+
+
+    <color name="red_700">#5C0504</color>
+    <color name="red_600">#810E10</color>
+    <color name="red_500">#A21314</color>
+    <color name="red_400">#BE2D2D</color>
+    <color name="red_400_70">#B3BE2D2D</color>
+    <color name="red_300">#ED5B5B</color>
+    <color name="red_200">#FAB0B0</color>
+    <color name="red_100">#FEE7E7</color>
+
+
+    <color name="yellow_700">#6A5A04</color>
+    <color name="yellow_600">#988308</color>
+    <color name="yellow_500">#B99E09</color>
+    <color name="yellow_400">#DBBB0B</color>
+    <color name="yellow_300">#EADC8D</color>
+    <color name="yellow_200">#F4EBC0</color>
+    <color name="yellow_100">#F8F5E4</color>
+
+
+    <color name="blue_700">#003358</color>
+    <color name="blue_600">#054D81</color>
+    <color name="blue_500">#045C9D</color>
+    <color name="blue_400">#0966AA</color>
+    <color name="blue_300">#5B9FD1</color>
+    <color name="blue_200">#8BBFE5</color>
+    <color name="blue_100">#CFDFEB</color>
+
+    <!--
+    Custom Colors
+    https://chir.ag/projects/name-that-color/
+    -->
+    <color name="cod_gray">#0D0D0D</color>
+    <color name="haze_green">#019752</color>
+    <color name="forest_green">#228C2E</color>
+    <color name="gun_smoke">#83918F</color>
+    <color name="edward">#ABB5B3</color>
+    <color name="tiara">#CED4D3</color>
+    <color name="mystic_gray">#D0D3D1</color>
+    <color name="nurse_gray">#DFE1E0</color>
+    <color name="sunshade">#FFAC33</color>
+
+    <color name="colorPrimary">#4968ff</color>
+    <color name="colorPrimaryDark">#4968ff</color>
+    <color name="colorAccent">#2926ff</color>
+
+    <color name="green_persian">#00a499</color>
+    <color name="purple_royal">#5f259f</color>
+    <color name="eggplant">#9e007e</color>
+
+    <color name="colorBlack">#222222</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhiteAlpha">#80ffffff</color>
+    <color name="colorBlackAlpha">#80000000</color>
+
+    <color name="colorTextGrayLightAlpha">#80818181</color>
+    <color name="colorTextGrayLight">#818181</color>
+    <color name="colorTextGray">#5F5F5F</color>
+    <color name="colorTextGrayDark">#414141</color>
+    <color name="grey_solitude">#EFF1F7</color>
+
+    <color name="color_blue_iris">#01BDD8</color>
+    <color name="blue_navy">#1374CA</color>
+    <color name="blue_summer_sky">#41B6E6</color>
+    <color name="blue_slate">#7D59C5</color>
+
+    <color name="black_erie">#202020</color>
+    <color name="black_raisin">#262626</color>
+    <color name="black_pearl">#121618</color>
+
+
+    <color name="free_scan_outer">#3269FB</color>
+    <color name="deep_scan_outer">#FF7143</color>
+
+    <!-- Big Image Toolbar bg-->
+    <color name="big_image_bg">#661685FC</color>
+</resources>

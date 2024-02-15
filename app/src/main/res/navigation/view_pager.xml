@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_pager"
+    app:startDestination="@id/subscriptionActivity">
+
+    <activity
+        android:id="@+id/subscriptionActivity"
+        android:name="com.adentech.rcvr.subscription.SubscriptionActivity"
+        android:label="SubscriptionActivity">
+    <action
+        android:id="@+id/action_subscriptionActivity_to_pagerSecondActivity"
+        app:destination="@id/pagerSecondActivity" />
+    </activity>
+    <activity
+        android:id="@+id/pagerSecondActivity"
+        android:name="com.adentech.rcvr.viewpager.PagerSecondActivity"
+        android:label="PagerSecondActivity" >
+        <action
+            android:id="@+id/action_pagerSecondActivity_to_pagerThirdActivity"
+            app:destination="@id/pagerThirdActivity" />
+    </activity>
+    <activity
+        android:id="@+id/pagerThirdActivity"
+        android:name="com.adentech.rcvr.viewpager.PagerThirdActivity"
+        android:label="PagerThirdActivity" />
+</navigation>

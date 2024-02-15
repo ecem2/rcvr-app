@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_deleted_container"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/margin_20"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            app:cardCornerRadius="@dimen/margin_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_16"
+                android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:progressDrawable="@drawable/seek_bar"
+            android:thumb="@drawable/seek_thumb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_18"
+            app:layout_constraintBottom_toTopOf="@+id/icPlay"
+            app:layout_constraintTop_toBottomOf="@+id/cardAudio"
+            android:progressBackgroundTint="@color/black"
+            android:progressTint="@color/blue" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:gravity="center"
+                android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icPlay"
+            android:layout_width="50dp"
+            android:padding="@dimen/margin_12"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_music"
+            android:src="@drawable/ic_play_white"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icPause"
+            android:layout_width="50dp"
+            android:padding="@dimen/margin_12"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/bg_music"
+            android:src="@drawable/ic_pause_white"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icStopMusic"
+            android:layout_width="50dp"
+            android:padding="@dimen/margin_12"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/bg_music"
+            android:src="@drawable/ic_arrow_white"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="start|center"
+            android:background="@drawable/bg_toolbar"
+            app:layout_constraintBottom_toTopOf="@+id/gl_audio"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_24"
+                android:src="@drawable/ic_back_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_audio_info"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:text="10/12/23"
+                android:textSize="@dimen/text_size_16"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/redhatdisplay_semi_bold"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/iv_end"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_back_button"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_end"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_audio_info"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_restore"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:minHeight="60dp"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_32"
+            android:text="@string/restore_audio"
+            android:textSize="@dimen/text_size_16"
+            app:autoSizeMaxTextSize="@dimen/text_size_24"
+            app:autoSizeMinTextSize="@dimen/text_size_12"
+            app:autoSizeTextType="uniform"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:fontFamily="@font/redhatdisplay_semi_bold"
+            android:background="@drawable/ic_onboard_button_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

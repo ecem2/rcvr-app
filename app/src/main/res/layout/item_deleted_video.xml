@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.adentech.rcvr.model.FileModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/videoPreviewImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_video_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/videoSizeTV"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginEnd="@dimen/margin_4"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:fontFamily="@font/redhatdisplay_bold"
+                android:gravity="center"
+                android:text="@{item.fileName}"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_13"
+                app:autoSizeMaxTextSize="@dimen/text_size_14"
+                app:autoSizeMinTextSize="@dimen/text_size_12"
+                app:autoSizeTextType="uniform"
+                tools:text="Sample Video.mp4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/videoSizeTV"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:fontFamily="@font/redhatdisplay_bold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_13"
+                app:autoSizeMaxTextSize="@dimen/text_size_14"
+                app:autoSizeMinTextSize="@dimen/text_size_12"
+                app:autoSizeTextType="uniform"
+                android:text="@{item.fileExtension}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="mp4"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:background="@color/blurry_bg"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </layout>

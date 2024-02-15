@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_main">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/onboardImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="20dp"
+            android:src="@mipmap/ic_onboard_image"
+            app:layout_constraintBottom_toTopOf="@+id/firstOnboardText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/firstOnboardText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:fontFamily="@font/redhatdisplay_extra_bold"
+            android:gravity="center"
+            android:maxWidth="200dp"
+            android:maxLines="2"
+            android:text="@string/get_back_the_images_you_lost"
+            android:textAllCaps="false"
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/text_size_30"
+            app:autoSizeMaxTextSize="@dimen/text_size_35"
+            app:autoSizeMinTextSize="@dimen/text_size_16"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/secondOnboardText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboardImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secondOnboardText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_36"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:gravity="center"
+            android:maxWidth="200dp"
+            android:maxLines="2"
+            android:text="@string/recover_deleted_photos_from_your_gallery_with_reco"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/text_size_16"
+            app:autoSizeMaxTextSize="@dimen/text_size_20"
+            app:autoSizeMinTextSize="@dimen/text_size_12"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/continueButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstOnboardText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/ic_onboard_button_bg"
+            android:fontFamily="@font/redhatdisplay_bold"
+            android:text="@string/get_started"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/secondOnboardText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

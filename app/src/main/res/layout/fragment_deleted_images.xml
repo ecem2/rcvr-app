@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_main">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/topLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/rv_deleted_images"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gl_deleted_end"
+            app:layout_constraintStart_toEndOf="@+id/gl_deleted_start">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_blue_back_button"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameTV"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/images"
+                android:textAllCaps="false"
+                android:layout_marginEnd="35dp"
+                android:fontFamily="@font/redhatdisplay_medium"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_deleted_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.05"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_deleted_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.95"
+            android:orientation="vertical"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_empty_folder_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_32"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gl_deleted_end"
+            app:layout_constraintStart_toEndOf="@+id/gl_deleted_start">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_empty_folder_iv"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                app:srcCompat="@drawable/ic_empty_gallery"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_empty_folder_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:text="@string/there_are_no_photos_in_your_trash"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_20"
+                android:textColor="@color/black"
+                android:fontFamily="@font/redhatdisplay_semi_bold"
+                android:gravity="center" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/progressBarLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            app:layout_constraintEnd_toStartOf="@+id/gl_deleted_end"
+            app:layout_constraintStart_toEndOf="@+id/gl_deleted_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ProgressBar
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="@string/a_few_minutes"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                app:autoSizeMaxTextSize="@dimen/text_size_20"
+                app:autoSizeMinTextSize="@dimen/text_size_12"
+                app:autoSizeTextType="uniform"
+                android:textAllCaps="false"
+                android:fontFamily="@font/redhatdisplay_bold"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_deleted_images"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:spanCount="3"
+            android:clipToPadding="false"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/gallery_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gl_deleted_end"
+            app:layout_constraintStart_toEndOf="@+id/gl_deleted_start"
+            app:layout_constraintTop_toBottomOf="@+id/topLinearLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_scan_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dialog_shadow"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/progress_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_30"
+                android:background="@drawable/bg_progress_loading"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/purple_500" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_12"
+                    android:fontFamily="@font/redhatdisplay_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/please_wait"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    app:autoSizeMaxTextSize="@dimen/text_size_22"
+                    app:autoSizeMinTextSize="@dimen/text_size_14"
+                    app:autoSizeTextType="uniform" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_permission_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_30"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_permission_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/redhatdisplay_semi_bold"
+                android:gravity="center"
+                android:text="@string/read_write_permission_description"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                app:autoSizeMaxTextSize="@dimen/text_size_30"
+                app:autoSizeMinTextSize="@dimen/text_size_12"
+                app:autoSizeTextType="uniform" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_settings"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/bg_allow_button"
+                android:fontFamily="@font/redhatdisplay_semi_bold"
+                android:gravity="center"
+                android:paddingStart="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_10"
+                android:text="@string/go_to_settings"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                app:autoSizeMaxTextSize="@dimen/text_size_20"
+                app:autoSizeMinTextSize="@dimen/text_size_12"
+                app:autoSizeTextType="uniform" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_empty_folder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_32"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_empty_folder"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_empty_gallery" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_empty_folder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:fontFamily="@font/redhatdisplay_semi_bold"
+                android:gravity="center"
+                android:text="@string/there_are_no_photos_in_your_trash"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_result_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dialog_shadow"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_top_oval_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.20" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_trash_can"
+                android:elevation="10dp"
+                android:src="@mipmap/ic_trash_can"
+                app:layout_constraintBottom_toTopOf="@+id/gl_oval_image"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gl_top_oval_image" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_oval_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.37" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/gl_dialog_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gl_card">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/deletedImagesCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_blue_bg"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/dialog_top"
+                        app:layout_constraintBottom_toTopOf="@+id/gl_middle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/gl_middle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.32" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_deleted_images"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gl_middle">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dialog_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/margin_16"
+                            android:layout_marginTop="@dimen/margin_16"
+                            android:layout_marginEnd="@dimen/margin_16"
+                            android:layout_weight="0.8"
+                            android:fontFamily="@font/redhatdisplay_semi_bold"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="@string/deleted_photos_were_found"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_26"
+                            app:autoSizeMaxTextSize="@dimen/text_size_30"
+                            app:autoSizeMinTextSize="@dimen/text_size_16"
+                            app:autoSizeTextType="uniform" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dialog_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/margin_16"
+                            android:layout_marginTop="@dimen/margin_6"
+                            android:layout_marginEnd="@dimen/margin_16"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/redhatdisplay_semi_bold"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="@string/recover_your_lost_photos"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14"
+                            app:autoSizeMaxTextSize="@dimen/text_size_16"
+                            app:autoSizeMinTextSize="@dimen/text_size_12"
+                            app:autoSizeTextType="uniform" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/button_restore_now"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="@dimen/margin_24"
+                            android:layout_marginBottom="@dimen/margin_20"
+                            android:layout_marginTop="@dimen/margin_12"
+                            android:layout_marginEnd="@dimen/margin_24"
+                            android:background="@drawable/bg_dialog_button">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/recover_button_title"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/redhatdisplay_semi_bold"
+                                android:gravity="center"
+                                android:text="@string/recover_all"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_14"
+                                app:autoSizeMaxTextSize="@dimen/text_size_16"
+                                app:autoSizeMinTextSize="@dimen/text_size_12"
+                                app:autoSizeTextType="uniform"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/premium_icon"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@mipmap/ic_crown" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_dialog_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.63" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
