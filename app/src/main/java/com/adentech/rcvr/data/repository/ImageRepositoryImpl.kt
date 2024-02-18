@@ -1,6 +1,5 @@
 package com.adentech.rcvr.data.repository
 
-
 import android.content.ContentUris
 import android.content.Context
 import android.net.Uri
@@ -198,7 +197,6 @@ class ImageRepositoryImpl @Inject constructor(
                     MediaStore.Files.FileColumns.RELATIVE_PATH,
                     MediaStore.Files.FileColumns.DATA
                 )
-
 
                 val keywordsForFile = listOf(
                     ".globalTrash", ".trash", ".Trash", "Trash", "trash", "recycle",

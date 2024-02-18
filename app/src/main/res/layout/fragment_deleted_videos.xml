@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@mipmap/bg_main">
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/topLinearLayout"
             android:layout_width="0dp"

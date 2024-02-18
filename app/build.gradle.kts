@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+    id("androidx.navigation.safeargs")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
     id("com.google.dagger.hilt.android")
@@ -61,10 +62,8 @@ android {
 
 dependencies {
 
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
     val lifecycleVersion = "2.7.0"
-
+    val navVersion = "2.7.7"
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -149,5 +148,9 @@ dependencies {
     implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
 
     implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
 }

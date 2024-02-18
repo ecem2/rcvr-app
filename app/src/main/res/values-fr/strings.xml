@@ -7,6 +7,7 @@
     <string name="recover_deleted_photos_from_your_gallery_with_reco">Récupérez les photos supprimées de votre galerie avec Reco.</string>
     <string name="get_started">Commencer</string>
     <string name="exit_message">Veuillez cliquer de nouveau sur RETOUR pour quitter</string>
+    <string name="deleted_videos_were_found">Vidéos supprimées trouvées</string>
     <string name="videos">Vidéos supprimées trouvées</string>
     <string name="videos_recovered">Vidéos récupérées</string>
     <string name="there_are_no_videos_in_your_trash">Il n\'y a aucune vidéo dans votre corbeille</string>
