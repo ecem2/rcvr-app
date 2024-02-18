@@ -1,14 +1,18 @@
 package com.adentech.rcvr.ui.home
 
-
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.*
+import android.net.Uri
+import android.os.Build
 import android.os.Environment
 import android.os.StatFs
+import android.provider.Settings
 import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.style.AbsoluteSizeSpan
@@ -16,6 +20,9 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.adentech.rcvr.R
 import com.adentech.rcvr.core.common.ArgumentKey
@@ -23,7 +30,6 @@ import com.adentech.rcvr.core.activities.BaseActivity
 import com.adentech.rcvr.data.model.StorageInfo
 import com.adentech.rcvr.databinding.ActivityImagesBinding
 import com.adentech.rcvr.databinding.DialogPermissionBinding
-import com.adentech.rcvr.extensions.observe
 import com.adentech.rcvr.ui.audio.DeletedAudioFragment
 import com.adentech.rcvr.ui.images.DeletedImagesFragment
 import com.adentech.rcvr.ui.files.FilesFragment
@@ -31,17 +37,29 @@ import com.adentech.rcvr.ui.videos.DeletedVideosFragment
 import com.adentech.rcvr.view.viewpager.ResultViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
 class ImagesActivity : BaseActivity<ResultViewModel, ActivityImagesBinding>() {
+
+    private var isStoragePermissionGranted = false
 
     override fun viewModelClass() = ResultViewModel::class.java
 
     override fun viewDataBindingClass() = ActivityImagesBinding::class.java
 
     override fun onInitDataBinding() {
-        observe(isStoragePermissionGranted, ::getStoragePermission)
+        setupUI()
+        //handleBackPressed()
+        isStoragePermissionGranted = checkStoragePermissions()
 
+        if (isStoragePermissionGranted) {
+            viewBinding.llButtons.visibility = View.VISIBLE
+            viewBinding.llPermissionError.visibility = View.GONE
+        } else {
+            showPermissionDialog()
+        }
+    }
+
+    private fun setupUI() {
         val firstWord = SpannableString(getString(R.string.internal))
         firstWord.setSpan(AbsoluteSizeSpan(14, true), 0, firstWord.length, 0)
 
@@ -82,8 +100,6 @@ class ImagesActivity : BaseActivity<ResultViewModel, ActivityImagesBinding>() {
         textView.textSize = if (adjustedTextSize < minSize) minSize.toFloat() else adjustedTextSize
 
         showStorageStatus()
-        handleBackPressed()
-
 
         viewBinding.videoCardView.setOnClickListener {
             showDeletedVideosFragment()
@@ -146,34 +162,6 @@ class ImagesActivity : BaseActivity<ResultViewModel, ActivityImagesBinding>() {
         transaction.add(R.id.cl_container, DeletedAudioFragment())
         transaction.commit()
     }
-    private fun getStoragePermission(isGranted: Boolean) {
-        if (isGranted) {
-            viewBinding.apply {
-                audioCardView.isClickable = true
-                audioCardView.isEnabled =  true
-                videoCardView.isClickable = true
-                videoCardView.isEnabled =  true
-                imageCardView.isClickable = true
-                imageCardView.isEnabled =  true
-                fileCardView.isClickable = true
-                fileCardView.isEnabled =  true
-            }
-        } else {
-            showPermissionDialog()
-            viewBinding.apply {
-                audioCardView.isClickable = false
-                audioCardView.isEnabled =  false
-                videoCardView.isClickable = false
-                videoCardView.isEnabled =  false
-                imageCardView.isClickable = false
-                imageCardView.isEnabled =  false
-                fileCardView.isClickable = false
-                fileCardView.isEnabled =  false
-
-            }
-        }
-    }
-
 
     private fun handleBackPressed() {
         val callback = object : OnBackPressedCallback(true) {
@@ -220,8 +208,6 @@ class ImagesActivity : BaseActivity<ResultViewModel, ActivityImagesBinding>() {
         viewBinding.transparentBackground.background = layerDrawable
     }
 
-
-
     private fun getStorageInfo(): StorageInfo {
         val storageDirectory = Environment.getExternalStorageDirectory()
         val stat = StatFs(storageDirectory.path)
@@ -231,48 +217,6 @@ class ImagesActivity : BaseActivity<ResultViewModel, ActivityImagesBinding>() {
 
         return StorageInfo(totalBytes, freeBytes)
     }
-
-
-//    private fun setupViewPager() {
-//        val viewPager = viewBinding.viewPager
-//        viewPager.adapter = ResultPagerAdapter(this@ImagesActivity)
-//        viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-//        viewPager.isUserInputEnabled = false
-//
-//        TabLayoutMediator(viewBinding.tabLayout, viewPager) { tab, position ->
-//            when (position) {
-//                0 -> {
-//                    tab.text = getString(R.string.images)
-//                }
-//                1 -> {
-//                    tab.text = getString(R.string.files)
-//                }
-//                else -> tab.text = EMPTY_STRING
-//            }
-//        }.attach()
-
-//        viewBinding.tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
-//            override fun onTabSelected(tab: TabLayout.Tab) {
-//                when (tab.position) {
-//                    0 -> {
-//                        viewBinding.tvImagesTitle.text = getString(R.string.all_deleted_images)
-//                    }
-//                    1 -> {
-//                        viewBinding.tvImagesTitle.text = getString(R.string.deleted_files)
-//                    }
-//                    else -> {
-//                        viewBinding.tvImagesTitle.text = getString(R.string.all_deleted_images)
-//                    }
-//                }
-//            }
-//
-//            override fun onTabUnselected(tab: TabLayout.Tab) {}
-//            override fun onTabReselected(tab: TabLayout.Tab) {}
-//        })
-    // }
-
-
-
 
     private fun showPermissionDialog() {
         val dialogBuilder = Dialog(this@ImagesActivity, R.style.CustomDialog)
@@ -290,23 +234,102 @@ class ImagesActivity : BaseActivity<ResultViewModel, ActivityImagesBinding>() {
             }
 
             cancelButton.setOnClickListener {
-                // showPermissionError()
+                viewBinding.llButtons.visibility = View.GONE
+                viewBinding.llPermissionError.visibility = View.VISIBLE
+
+                viewBinding.dialogButtonSettings.setOnClickListener {
+                    requestForStoragePermissions()
+                }
                 dialogBuilder.cancel()
             }
         }
         dialogBuilder.show()
     }
 
-//    private fun showPermissionError() {
-//        viewBinding.llPermissionError.visibility = View.VISIBLE
-//        viewBinding.buttonSettings.setOnClickListener {
-//            requestForStoragePermissions()
-//        }
-//    }
+    override fun onResume() {
+        super.onResume()
+        if (isStoragePermissionGranted) {
+            viewBinding.llButtons.visibility = View.VISIBLE
+            viewBinding.llPermissionError.visibility = View.GONE
+        } else {
+            viewBinding.llButtons.visibility = View.GONE
+            viewBinding.llPermissionError.visibility = View.VISIBLE
+        }
+    }
 
+    fun checkStoragePermissions(): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            //Android is 11 (R) or above
+            Environment.isExternalStorageManager()
+        } else {
+            //Below android 11
+            val write =
+                ContextCompat.checkSelfPermission(this@ImagesActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            val read =
+                ContextCompat.checkSelfPermission(this@ImagesActivity, Manifest.permission.READ_EXTERNAL_STORAGE)
+            read == PackageManager.PERMISSION_GRANTED && write == PackageManager.PERMISSION_GRANTED
+        }
+    }
 
+    fun requestForStoragePermissions() {
+        //Android is 11 (R) or above
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            try {
+                val intent = Intent()
+                intent.action = Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
+                val uri = Uri.fromParts("package", this.packageName, null)
+                intent.data = uri
+                storageActivityResultLauncher.launch(intent)
+            } catch (e: Exception) {
+                val intent = Intent()
+                intent.action = Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION
+                storageActivityResultLauncher.launch(intent)
+            }
+        } else {
+            //Below android 11
+            ActivityCompat.requestPermissions(
+                this, arrayOf(
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                ),
+                STORAGE_PERMISSION_CODE
+            )
+        }
+    }
+
+    private val storageActivityResultLauncher: ActivityResultLauncher<Intent> =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                //Android is 11 (R) or above
+                isStoragePermissionGranted = Environment.isExternalStorageManager()
+            } else {
+                // TODO daha eski  icin check
+                if (isStoragePermissionGranted) {
+
+                } else {
+
+                }
+            }
+        }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == STORAGE_PERMISSION_CODE) {
+            if (grantResults.isNotEmpty()) {
+                val write = grantResults[0] == PackageManager.PERMISSION_GRANTED
+                val read = grantResults[1] == PackageManager.PERMISSION_GRANTED
+                isStoragePermissionGranted = read && write
+            }
+        }
+    }
 
     companion object {
+        const val STORAGE_PERMISSION_CODE = 23
+
         fun newIntent(context: Context, returnScreen: String? = null) =
             Intent(context, ImagesActivity::class.java).apply {
                 putExtra(ArgumentKey.IMAGES_SCREEN, returnScreen)
