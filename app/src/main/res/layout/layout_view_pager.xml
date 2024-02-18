@@ -40,7 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_premium"
-            android:text="@string/remove_duplicates" />
+            android:text="@string/image_recovery" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_premium_description"
@@ -49,9 +49,11 @@
             android:layout_marginStart="@dimen/margin_16"
             android:layout_marginEnd="@dimen/margin_16"
             android:layout_weight="1"
+            android:paddingStart="@dimen/margin_32"
+            android:paddingEnd="@dimen/margin_32"
             android:layout_marginTop="@dimen/margin_12"
             android:fontFamily="@font/exo_medium"
-            android:text="@string/you_can_delete_duplicated_photos_and_videos"
+            android:text="@string/photo_recovery_description"
             android:textAllCaps="false"
             android:textColor="#959A9F"
             android:textSize="@dimen/text_size_18"

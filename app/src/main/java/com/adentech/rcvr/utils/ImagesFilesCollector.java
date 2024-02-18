@@ -3,8 +3,8 @@ package com.adentech.rcvr.utils;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.adentech.rcvr.model.FileModel;
-import com.adentech.rcvr.model.MainFileModel;
+import com.adentech.rcvr.data.model.FileModel;
+import com.adentech.rcvr.data.model.MainFileModel;
 
 import java.util.ArrayList;
 

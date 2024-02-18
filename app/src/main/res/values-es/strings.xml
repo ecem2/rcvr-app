@@ -51,6 +51,12 @@
     <string name="stop_scanning">Detener Escaneo</string>
     <string name="internal">Interna</string>
     <string name="storage">Almacenamiento</string>
+    <string name="image_recovery">Recuperación de fotos</string>
+    <string name="photo_recovery_description">Recupere fácilmente fotos borradas o perdidas accidentalmente</string>
+    <string name="video_recovery">Recuperación de vídeo</string>
+    <string name="video_recovery_description">Ahora es fácil recuperar videos que borraste accidentalmente</string>
+    <string name="audio_recovery">Recuperación de audio</string>
+    <string name="audio_recovery_description">Manera profesional de recuperar tus archivos de audio eliminados</string>
 
     <string name="recover_deleted_photos">Recuperar Fotos Eliminadas</string>
     <string name="photos_recovered">Recuperando fotos…</string>

@@ -53,6 +53,13 @@
     <string name="restore_your_data">استعادة البيانات الخاصة بك</string>
     <string name="internal">داخلي</string>
     <string name="storage">تخزين</string>
+    <string name="image_recovery">استعادة الصور</string>
+    <string name="video_recovery">استعادة الفيديو</string>
+    <string name="video_recovery_description">أصبح من السهل الآن استعادة مقاطع الفيديو التي حذفتها عن طريق الخطأ</string>
+    <string name="audio_recovery">استعادة الصوت</string>
+    <string name="audio_recovery_description">طريقة احترافية لاستعادة ملفاتك الصوتية المحذوفة</string>
+
+    <string name="photo_recovery_description">يمكنك بسهولة استرداد الصور المحذوفة أو المفقودة عن طريق الخطأ</string>
 
     <string name="stop_scanning">إيقاف المسح</string>
     <string name="recover_deleted_photos">استرد الصور المحذوفة</string>

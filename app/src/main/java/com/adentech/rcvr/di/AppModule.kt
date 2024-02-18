@@ -1,8 +1,8 @@
 package com.adentech.rcvr.di
 
 import android.content.Context
-import com.adentech.rcvr.repository.ImageRepository
-import com.adentech.rcvr.repository.ImageRepositoryImpl
+import com.adentech.rcvr.data.repository.ImageRepository
+import com.adentech.rcvr.data.repository.ImageRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

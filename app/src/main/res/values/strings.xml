@@ -53,7 +53,12 @@
     <string name="photos_recovered">Photos are getting recovered…</string>
     <string name="internal">Internal</string>
     <string name="storage">Storage</string>
-
+    <string name="image_recovery">Photo Recovery</string>
+    <string name="video_recovery">Video Recovery</string>
+    <string name="audio_recovery">Audio Recovery</string>
+    <string name="photo_recovery_description">Easily retrieve accidentally deleted or lost photos</string>
+    <string name="video_recovery_description">It\'s now easy to recover videos you accidentally deleted</string>
+    <string name="audio_recovery_description">Professional way to recover your deleted audio files</string>
 
     <!-- DIALOG -->
     <string name="please_wait">Please wait</string>

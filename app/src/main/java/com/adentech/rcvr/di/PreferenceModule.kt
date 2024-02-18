@@ -1,8 +1,8 @@
 package com.adentech.rcvr.di
 
 
-import com.adentech.rcvr.preferences.Preferences
-import com.adentech.rcvr.preferences.RecoveryPreferenceManager
+import com.adentech.rcvr.data.preferences.Preferences
+import com.adentech.rcvr.data.preferences.RecoveryPreferenceManager
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

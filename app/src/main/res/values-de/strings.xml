@@ -53,6 +53,12 @@
     <string name="restore_your_data">Stellen Sie Ihre Daten wieder her</string>
     <string name="internal">Intern</string>
     <string name="storage">Lagerung</string>
+    <string name="image_recovery">Fotowiederherstellung</string>
+    <string name="photo_recovery_description">Versehentlich gelöschte oder verlorene Fotos können ganz einfach wiederhergestellt werden</string>
+    <string name="video_recovery">Videowiederherstellung</string>
+    <string name="video_recovery_description">Es ist jetzt ganz einfach, versehentlich gelöschte videos wiederherzustellen</string>
+    <string name="audio_recovery">Audiowiederherstellung</string>
+    <string name="audio_recovery_description">Professionelle Möglichkeit, Ihre gelöschten Audiodateien wiederherzustellen</string>
 
     <string name="stop_scanning">Scannen stoppen</string>
     <string name="recover_deleted_photos">Gelöschte Fotos wiederherstellen</string>

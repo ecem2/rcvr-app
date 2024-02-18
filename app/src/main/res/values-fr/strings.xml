@@ -53,6 +53,12 @@
     <string name="restore_your_data">Restaurez vos données</string>
     <string name="internal">Interne</string>
     <string name="storage">Stockage</string>
+    <string name="image_recovery">Récupération de photos</string>
+    <string name="photo_recovery_description">Récupérez facilement des photos supprimées ou perdues accidentellement</string>
+    <string name="video_recovery">Récupération vidéo</string>
+    <string name="video_recovery_description">Il est désormais facile de récupérer les vidéos que vous avez accidentellement supprimées</string>
+    <string name="audio_recovery">Récupération audio</string>
+    <string name="audio_recovery_description">Un moyen professionnel de récupérer vos fichiers audio supprimés</string>
 
     <string name="stop_scanning">Arrêter l\'analyse</string>
     <string name="recover_deleted_photos">Récupérer les photos supprimées</string>

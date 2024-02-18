@@ -2,7 +2,6 @@ package com.adentech.rcvr.utils;
 
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -10,13 +9,12 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore;
 import android.util.Log;
-import com.adentech.rcvr.model.FileLocation;
-import com.adentech.rcvr.model.FileModel;
+import com.adentech.rcvr.data.model.FileLocation;
+import com.adentech.rcvr.data.model.FileModel;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 import java.util.regex.Pattern;
 
 public class SearchAllFile extends AsyncTask<Void, Integer, Void> {

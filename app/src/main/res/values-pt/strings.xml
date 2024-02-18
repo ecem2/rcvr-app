@@ -56,6 +56,12 @@
     <string name="restore_your_data">Restaure seus dados</string>
     <string name="internal">Interna</string>
     <string name="storage">Armazenar</string>
+    <string name="image_recovery">Recuperação de fotos</string>
+    <string name="photo_recovery_description">Recupere facilmente fotos excluídas ou perdidas acidentalmente</string>
+    <string name="video_recovery">Recuperação de vídeo</string>
+    <string name="video_recovery_description">Agora é fácil recuperar vídeos excluídos acidentalmente</string>
+    <string name="audio_recovery">Recuperação de áudio</string>
+    <string name="audio_recovery_description">Maneira profissional de recuperar seus arquivos de áudio excluídos</string>
 
     <string name="scanning_">Digitalizando…</string>
     <string name="completed">CONCLUÍDO</string>

@@ -6,7 +6,7 @@
 
     <activity
         android:id="@+id/subscriptionActivity"
-        android:name="com.adentech.rcvr.subscription.SubscriptionActivity"
+        android:name="com.adentech.rcvr.ui.subscription.SubscriptionActivity"
         android:label="SubscriptionActivity">
     <action
         android:id="@+id/action_subscriptionActivity_to_pagerSecondActivity"
@@ -14,7 +14,7 @@
     </activity>
     <activity
         android:id="@+id/pagerSecondActivity"
-        android:name="com.adentech.rcvr.viewpager.PagerSecondActivity"
+        android:name="com.adentech.rcvr.view.viewpager.PagerSecondActivity"
         android:label="PagerSecondActivity" >
         <action
             android:id="@+id/action_pagerSecondActivity_to_pagerThirdActivity"
@@ -22,6 +22,6 @@
     </activity>
     <activity
         android:id="@+id/pagerThirdActivity"
-        android:name="com.adentech.rcvr.viewpager.PagerThirdActivity"
+        android:name="com.adentech.rcvr.view.viewpager.PagerThirdActivity"
         android:label="PagerThirdActivity" />
 </navigation>

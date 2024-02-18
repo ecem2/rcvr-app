@@ -17,7 +17,7 @@
     <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
-        android:name=".billing.RecoveryApplication"
+        android:name=".data.billing.RecoveryApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -33,37 +33,27 @@
         tools:ignore="LockedOrientationActivity"
         tools:targetApi="33">
         <activity
-            android:name=".scan.FreeScanActivity"
+            android:name=".ui.fullscreen.GalleryActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fullscreen.GalleryActivity"
+            android:name=".ui.fullscreen.DeletedImageActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fullscreen.DeletedImageActivity"
+            android:name=".ui.home.ImagesActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".home.ImagesActivity"
+            android:name=".ui.fullscreen.DeletedVideoActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fullscreen.DeletedVideoActivity"
+            android:name=".ui.fullscreen.DeletedAudioActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fullscreen.DeletedAudioActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".scan.ScanActivity"
-            android:exported="false"
-            android:noHistory="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".home.HomeActivity"
+            android:name=".ui.home.HomeActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.App.Starting">
@@ -74,15 +64,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".onboard.OnboardActivity"
+            android:name=".ui.onboard.OnboardActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".subscription.SubscriptionActivity"
+            android:name=".ui.subscription.SubscriptionActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".subscription.FullscreenActivity"
+            android:name=".ui.subscription.FullscreenActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 

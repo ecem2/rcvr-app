@@ -1,7 +1,7 @@
 package com.adentech.rcvr.extensions
 
 import android.content.Context
-import com.adentech.rcvr.common.Constants.EMPTY_STRING
+import com.adentech.rcvr.core.common.Constants.EMPTY_STRING
 
 fun Any.getString(context: Context): String {
     return when (this) {

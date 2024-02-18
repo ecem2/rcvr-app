@@ -1,7 +1,7 @@
 package com.adentech.rcvr.extensions
 
 import androidx.lifecycle.*
-import com.adentech.rcvr.common.Event
+import com.adentech.rcvr.core.common.Event
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.launch
 

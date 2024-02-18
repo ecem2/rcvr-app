@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/premiumImage"
-        android:text="AAAAAAAAA" />
+        android:text="@string/video_recovery" />
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/deleteText"
         android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
         android:layout_weight="1"
         android:layout_marginTop="@dimen/margin_12"
         android:fontFamily="@font/exo_medium"
-        android:text="BBBBBBBBB"
+        android:text="@string/video_recovery_description"
         android:textAllCaps="false"
         android:textColor="#959A9F"
         android:textSize="@dimen/text_size_18"

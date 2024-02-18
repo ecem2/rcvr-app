@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.adentech.rcvr.model.FileModel" />
+            type="com.adentech.rcvr.data.model.FileModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

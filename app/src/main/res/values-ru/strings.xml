@@ -54,6 +54,12 @@
     <string name="restore_your_data">Восстановите ваши данные</string>
     <string name="internal">Внутренний</string>
     <string name="storage">Хранилище</string>
+    <string name="image_recovery">Восстановление фотографий</string>
+    <string name="photo_recovery_description">Легко восстанавливайте случайно удаленные или потерянные фотографии.</string>
+    <string name="video_recovery">Восстановление видео</string>
+    <string name="video_recovery_description">Теперь легко восстановить случайно удаленные видео.</string>
+    <string name="audio_recovery">Восстановление аудио</string>
+    <string name="audio_recovery_description">Профессиональный способ восстановить удаленные аудиофайлы</string>
 
     <string name="recover_deleted_photos">Восстановить удаленные фотографии</string>
     <string name="photos_recovered">Фотографии восстанавливаются…</string>

@@ -55,6 +55,12 @@
     <string name="restore_your_data">Verilerinizi Geri Yükleyin</string>
     <string name="internal">Dahili</string>
     <string name="storage">Depolama</string>
+    <string name="image_recovery">Fotoğraf Kurtarma</string>
+    <string name="photo_recovery_description">Yanlışlıkla silinen veya kaybolan fotoğraflarınızı kolayca geri getirin</string>
+    <string name="video_recovery">Video Kurtarma</string>
+    <string name="video_recovery_description">Yanlışlıkla sildiğiniz videoları kurtarmak artık çok kolay</string>
+    <string name="audio_recovery">Ses Kurtarma</string>
+    <string name="audio_recovery_description">Silinen ses dosyalarınızı kurtarmanın profesyonel yolu</string>
 
     <string name="scanning_">Taranıyor…</string>
     <string name="completed">TAMAMLANDI</string>
