@@ -1,6 +1,5 @@
 package com.adentech.rcvr.ui.videos
 
-
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
@@ -10,11 +9,9 @@ import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import com.adentech.rcvr.BuildConfig
 import com.adentech.rcvr.R
 import com.adentech.rcvr.data.billing.RecoveryApplication
 import com.adentech.rcvr.core.common.Constants
@@ -29,7 +26,6 @@ import com.adentech.rcvr.extensions.withDelay
 import com.adentech.rcvr.ui.home.ImagesActivity
 import com.adentech.rcvr.ui.fullscreen.DeletedVideoActivity
 import com.adentech.rcvr.scan.ScanViewModel
-import com.adentech.rcvr.ui.fullscreen.DeletedImageActivity
 import com.adentech.rcvr.ui.subscription.SubscriptionActivity
 import com.adentech.rcvr.utils.FilesFetcher
 import com.adentech.rcvr.utils.ImagesFilesCollector
@@ -44,7 +40,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.random.Random
-
 
 @AndroidEntryPoint
 class DeletedVideosFragment : BaseFragment<ScanViewModel, FragmentDeletedVideosBinding>() {
@@ -204,7 +199,7 @@ class DeletedVideosFragment : BaseFragment<ScanViewModel, FragmentDeletedVideosB
         val min = ImagesFilesCollector.foundVideoList.size / 5
         val max = ImagesFilesCollector.foundVideoList.size / 2
         val count = if (ImagesFilesCollector.foundVideoList.size / 50 > 3) {
-            if (BuildConfig.DEBUG) 10 else 160
+            160
         } else {
             ImagesFilesCollector.foundVideoList.size / 10 + 1
         }

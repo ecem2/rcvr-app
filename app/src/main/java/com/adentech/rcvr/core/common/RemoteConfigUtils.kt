@@ -35,11 +35,7 @@ object RemoteConfigUtils {
         val remoteConfig: FirebaseRemoteConfig = Firebase.remoteConfig
 
         val configSettings = remoteConfigSettings {
-            minimumFetchIntervalInSeconds = if (BuildConfig.DEBUG) {
-                0
-            } else {
-                0
-            }
+            minimumFetchIntervalInSeconds = 0
         }
 
         remoteConfig.apply {

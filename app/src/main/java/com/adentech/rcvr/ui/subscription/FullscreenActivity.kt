@@ -2,9 +2,9 @@ package com.adentech.rcvr.ui.subscription
 
 import android.annotation.SuppressLint
 import android.webkit.WebViewClient
-import com.adentech.rcvr.BuildConfig.PRIVACY_POLICY_LINK
-import com.adentech.rcvr.BuildConfig.TERMS_OF_USE_LINK
 import com.adentech.rcvr.core.activities.BaseActivity
+import com.adentech.rcvr.core.common.Constants.PRIVACY_POLICY_LINK
+import com.adentech.rcvr.core.common.Constants.TERMS_OF_USE_LINK
 import com.adentech.rcvr.databinding.ActivityFullscreenBinding
 import dagger.hilt.android.AndroidEntryPoint
 

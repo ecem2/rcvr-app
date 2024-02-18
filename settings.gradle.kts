@@ -1,9 +1,9 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+        gradlePluginPortal()
+        maven { url = uri("https://jitpack.io") }
         jcenter()
     }
 }
@@ -12,9 +12,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+        maven { url = uri("https://jitpack.io") }
         jcenter()
     }
 }
+
 rootProject.name = "rcvr"
-include ':app'
+include(":app")

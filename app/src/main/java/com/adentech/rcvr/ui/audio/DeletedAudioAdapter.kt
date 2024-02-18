@@ -55,7 +55,7 @@ class DeletedAudioAdapter(
 //                }
 
             } else {
-                val currentPosition = holder.adapterPosition
+                val currentPosition = holder.absoluteAdapterPosition
                 if (currentPosition != RecyclerView.NO_POSITION) {
                     Handler(Looper.getMainLooper()).post {
                         val updatedList =

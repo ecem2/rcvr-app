@@ -18,7 +18,7 @@ class DeletedAudioViewHolder(
         binding.executeAfter {
             this.item = item
             root.setOnClickListener {
-                if (adapterPosition != RecyclerView.NO_POSITION) {
+                if (absoluteAdapterPosition != RecyclerView.NO_POSITION) {
                     onItemClicked?.invoke(item)
                 }
             }

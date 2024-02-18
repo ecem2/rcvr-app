@@ -13,7 +13,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import com.adentech.rcvr.BuildConfig
 import com.adentech.rcvr.R
 import com.adentech.rcvr.data.billing.RecoveryApplication
 import com.adentech.rcvr.core.common.Constants
@@ -55,15 +54,11 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         )
     }
 
-
     private var myMotor: SearchAllFile? = null
     private var volums: ArrayList<String> = ArrayList()
     private var rewardedList: List<Int>? = null
     private val _isStoragePermissionGranted: MutableLiveData<Boolean> = MutableLiveData()
-    val isStoragePermissionGranted: LiveData<Boolean> = _isStoragePermissionGranted
-    var isProgressDone: Boolean = false
     private var rewardedCount = 0
-    private val image: ArrayList<FileModel> = ArrayList()
     private var fileModel: FileModel? = null
 
     override fun getResourceLayoutId() = R.layout.fragment_deleted_images
@@ -78,7 +73,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
             adjustImages()
             getFileList()
         }
-
     }
 
     override fun onInitDataBinding() {
@@ -90,7 +84,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
                 observe(viewModel.allTrashedFilesList, ::getTrashedList)
 
             }
-
         } else {
             adjustImages()
             viewBinding.cardScanProgress.visibility = View.VISIBLE
@@ -102,7 +95,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
                 getFileList()
 
             }
-
         }
         initRecyclerView()
         viewBinding.buttonRestoreNow.setOnClickListener {
@@ -133,9 +125,7 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         if (volums.isNotEmpty()) {
             myMotor = SearchAllFile(volums, requireActivity(), requireContext())
             myMotor?.execute(*arrayOfNulls(0))
-
         }
-
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -149,7 +139,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         val color = ContextCompat.getColor(requireContext(), R.color.dialog_red_text)
         val coloredText = changeColor(dialogText, color, color)
         viewBinding.dialogTitle.text = coloredText
-
     }
 
     fun onItemClick(fileModel: FileModel, i: Int) {
@@ -190,7 +179,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
             Status.LOADING -> {
                 viewBinding.progressBarLL.visibility = View.GONE
                 viewBinding.progressBarLL.visibility = View.VISIBLE
-
             }
         }
     }
@@ -214,17 +202,13 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         val min = ImagesFilesCollector.foundImagesList.size / 5
         val max = ImagesFilesCollector.foundImagesList.size / 2
         val count = if (ImagesFilesCollector.foundImagesList.size / 50 > 3) {
-            if (BuildConfig.DEBUG) 10 else 160
+            160
         } else {
             ImagesFilesCollector.foundImagesList.size / 10 + 1
         }
 
         val indexesArray: ArrayList<Int> = ArrayList()
         val currentList: ArrayList<FileModel> = ArrayList()
-
-        Log.d("aass", "indexesArray size: ${indexesArray.size}")
-        Log.d("aass", "currentList size: ${currentList.size}")
-        Log.d("aass", "currentList: $currentList")
         lifecycleScope.launch {
             if (ImagesFilesCollector.foundImagesList.isNotEmpty()) {
                 viewBinding.llEmptyFolder.visibility = View.GONE
@@ -246,9 +230,7 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
                                 ImagesFilesCollector.foundImagesList[indexesArray[img - 1]]
                             currentList.add(0, chosenImage)
                             currentList.add(chosenImage)
-
                         }
-
                     }
 
                     if (!isSameList(currentList, deletedImagesAdapter.currentList)) {
@@ -263,8 +245,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
                     withDelay(2000) {
                         showDialog()
                         viewBinding.clResultDialog.visibility = View.VISIBLE
-
-
                     }
                 } else {
                     withContext(Dispatchers.Main) {
@@ -302,7 +282,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
 
         return builder
     }
-
 
     private fun getTrashedList(resource: Resource<MainFileModel>) {
         when (resource.status) {
@@ -344,10 +323,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
             }
         }
     }
-
-//    private fun onItemClicked(image: FileModel, position: Int) {
-//        navigateToDeletedImageActivity(image)
-//    }
 
     private fun navigateToSubscription() {
         startActivity(Intent(requireContext(), SubscriptionActivity::class.java))

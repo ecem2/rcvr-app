@@ -10,13 +10,13 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.adentech.rcvr.BuildConfig
-import com.adentech.rcvr.BuildConfig.MONTHLY_PREMIUM
-import com.adentech.rcvr.BuildConfig.YEARLY_PREMIUM
 import com.adentech.rcvr.R
 import com.adentech.rcvr.core.common.ArgumentKey
 import com.adentech.rcvr.core.common.RemoteConfigUtils
 import com.adentech.rcvr.core.activities.BaseActivity
+import com.adentech.rcvr.core.common.Constants.INTERSTITIAL_ID
+import com.adentech.rcvr.core.common.Constants.MONTHLY_PREMIUM
+import com.adentech.rcvr.core.common.Constants.YEARLY_PREMIUM
 import com.adentech.rcvr.data.billing.MainState
 import com.adentech.rcvr.databinding.ActivitySubscriptionBinding
 import com.adentech.rcvr.extensions.observe
@@ -330,7 +330,7 @@ class SubscriptionActivity() : BaseActivity<MainViewModel, ActivitySubscriptionB
         val adRequest = AdRequest.Builder().build()
         InterstitialAd.load(
             this,
-            BuildConfig.INTERSTITIAL_ID,
+            INTERSTITIAL_ID,
             adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {
@@ -345,6 +345,7 @@ class SubscriptionActivity() : BaseActivity<MainViewModel, ActivitySubscriptionB
             })
     }
     override fun onBackPressed() {
+        super.onBackPressed()
         showInterAds()
     }
     companion object {

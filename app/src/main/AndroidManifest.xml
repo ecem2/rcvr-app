@@ -31,7 +31,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Recovery"
         tools:ignore="LockedOrientationActivity"
-        tools:targetApi="33">
+        tools:targetApi="34">
         <activity
             android:name=".ui.fullscreen.GalleryActivity"
             android:exported="false"

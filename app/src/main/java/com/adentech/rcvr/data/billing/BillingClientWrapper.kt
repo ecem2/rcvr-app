@@ -1,11 +1,12 @@
 package com.adentech.rcvr.data.billing
 
-
 import android.app.Activity
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
-import com.adentech.rcvr.BuildConfig
 import com.adentech.rcvr.R
+import com.adentech.rcvr.core.common.Constants.MONTHLY_PREMIUM
+import com.adentech.rcvr.core.common.Constants.WEEKLY_PREMIUM
+import com.adentech.rcvr.core.common.Constants.YEARLY_PREMIUM
 import com.adentech.rcvr.data.preferences.Preferences
 import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
@@ -115,15 +116,15 @@ class BillingClientWrapper(
     private fun queryProductDetails() {
         val productList = listOf(
             QueryProductDetailsParams.Product.newBuilder()
-                .setProductId(BuildConfig.WEEKLY_PREMIUM)
+                .setProductId(WEEKLY_PREMIUM)
                 .setProductType(BillingClient.ProductType.SUBS)
                 .build(),
             QueryProductDetailsParams.Product.newBuilder()
-                .setProductId(BuildConfig.MONTHLY_PREMIUM)
+                .setProductId(MONTHLY_PREMIUM)
                 .setProductType(BillingClient.ProductType.SUBS)
                 .build(),
             QueryProductDetailsParams.Product.newBuilder()
-                .setProductId(BuildConfig.YEARLY_PREMIUM)
+                .setProductId(YEARLY_PREMIUM)
                 .setProductType(BillingClient.ProductType.SUBS)
                 .build()
         )
