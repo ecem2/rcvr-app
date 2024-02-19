@@ -71,8 +71,8 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         setupBackButton()
         handleBackPressed()
         initRecyclerView()
+        viewBinding.cardScanProgress.visibility = View.VISIBLE
         if (RecoveryApplication.isPremium) {
-            viewBinding.cardScanProgress.visibility = View.VISIBLE
             viewBinding.clResultDialog.visibility = View.GONE
             viewBinding.deletedImagesCl.visibility = View.GONE
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -82,7 +82,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
                 getFileList()
             }
         } else {
-            viewBinding.cardScanProgress.visibility = View.VISIBLE
             viewBinding.llPermissionError.visibility = View.GONE
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -116,15 +115,17 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         if (volums.isNotEmpty()) {
             myMotor = SearchAllFile(volums, requireActivity(), requireContext())
             myMotor?.execute(*arrayOfNulls(0))
-            deletedImagesAdapter.submitList(ImagesFilesCollector.foundImagesList)
+
+            if (RecoveryApplication.isPremium) {
+                deletedImagesAdapter.submitList(ImagesFilesCollector.foundImagesList)
+            } else {
+                adjustImages(ImagesFilesCollector.foundImagesList, false)
+            }
         }
     }
 
     @SuppressLint("NotifyDataSetChanged")
     private fun showDialog() {
-        deletedImagesAdapter.rewardedList = rewardedList
-        deletedImagesAdapter.notifyDataSetChanged()
-
         viewBinding.cardScanProgress.visibility = View.GONE
         viewBinding.clResultDialog.visibility = View.VISIBLE
         val dialogText = getString(R.string.deleted_photos_were_found)
@@ -183,6 +184,7 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
     private fun getImagesList(resource: Resource<ArrayList<FileModel>>) {
         when (resource.status) {
             Status.SUCCESS -> {
+                viewBinding.cardScanProgress.visibility = View.GONE
                 resource.data?.let {
                     if (it.size < 200) {
                         for (i in 1..82) {
@@ -239,25 +241,13 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
     }
 
     private fun adjustImages(imageList: ArrayList<FileModel>, isCustom: Boolean) {
-        val adjustedImageList: ArrayList<FileModel> = ArrayList()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            adjustedImageList.addAll(imageList)
-        } else {
-            adjustedImageList.addAll(ImagesFilesCollector.foundImagesList)
-        }
-        val min = adjustedImageList.size / 5
-        val max = adjustedImageList.size / 2
-//        val count = if (adjustedImageList.size / 50 > 3) {
-//            160
-//        } else {
-//            adjustedImageList.size / 10 + 1
-//        }
-
-        val count = if (adjustedImageList.size < 200) {
+        val min = imageList.size / 5
+        val max = imageList.size / 2
+        val count = if (imageList.size < 200) {
             83
         } else {
-            if (adjustedImageList.size < 1000) {
-                (adjustedImageList.size / 6) + 1
+            if (imageList.size < 1000) {
+                (imageList.size / 6) + 1
             } else {
                 160
             }
@@ -266,7 +256,8 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         val indexesArray: ArrayList<Int> = ArrayList()
         val currentList: ArrayList<FileModel> = ArrayList()
         lifecycleScope.launch {
-            if (adjustedImageList.isNotEmpty()) {
+            if (imageList.isNotEmpty()) {
+                viewBinding.cardScanProgress.visibility = View.GONE
                 viewBinding.llEmptyFolder.visibility = View.GONE
                 viewBinding.tvProgressBar.text = getString(R.string.photos_recovered)
                 if (isCustom) {
@@ -279,8 +270,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
                         delay(randomTime)
                         withContext(Dispatchers.Main) {
                             val chosenImage: FileModel = imageList[indexesArray[img]]
-//                            newList.add(0, chosenImage)
-
                             currentList.add(0, chosenImage)
                             val newList: ArrayList<FileModel> = ArrayList()
                             newList.addAll(currentList)
@@ -312,46 +301,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
                     }
                 }
                 withDelay(2000, ::showDialog)
-
-
-//                while (indexesArray.size < count) {
-//                    val randomNumber = Random.nextInt(min, max + 1)
-//                    if (randomNumber !in indexesArray) {
-//                        indexesArray.add(randomNumber)
-//                    }
-//                }
-//
-//                if (adjustedImageList.isNotEmpty()) {
-//                    for (img in 1..indexesArray.size) {
-//                        val randomTime = Random.nextLong(120, 230)
-//                        delay(randomTime)
-//                        withContext(Dispatchers.Main) {
-//                            val chosenImage: FileModel =
-//                                adjustedImageList[indexesArray[img - 1]]
-//                            currentList.add(0, chosenImage)
-//                            currentList.add(chosenImage)
-//                        }
-//                    }
-//
-//                    if (!isSameList(currentList, deletedImagesAdapter.currentList)) {
-//                        val newList: ArrayList<FileModel> = ArrayList()
-//                        newList.addAll(currentList)
-//                        deletedImagesAdapter.submitList(currentList.toList())
-//                        deletedImagesAdapter.notifyDataSetChanged()
-//                        rewardedList = getThreeRandomPositions(newList)
-//                        viewBinding.rvDeletedImages.scrollToPosition(0)
-//                    }
-//
-//                    withDelay(2000) {
-//                        showDialog()
-//                        viewBinding.clResultDialog.visibility = View.VISIBLE
-//                    }
-//                } else {
-//                    withContext(Dispatchers.Main) {
-//                        viewBinding.cardScanProgress.visibility = View.GONE
-//                        viewBinding.llEmptyFolder.visibility = View.VISIBLE
-//                    }
-//                }
             } else {
                 withContext(Dispatchers.Main) {
                     viewBinding.cardScanProgress.visibility = View.GONE

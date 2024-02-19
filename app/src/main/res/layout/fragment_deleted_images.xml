@@ -119,6 +119,7 @@
                 android:layout_margin="@dimen/margin_30"
                 android:background="@drawable/bg_progress_loading"
                 android:orientation="vertical"
+                android:visibility="gone"
                 android:padding="@dimen/padding_16"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

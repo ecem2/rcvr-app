@@ -6,8 +6,8 @@ object Constants {
     const val MONTHLY_PREMIUM = "is_monthly_premium"
     const val WEEKLY_PREMIUM = "is_weekly_premium"
     const val LIFETIME_PREMIUM = "is_lifetime_premium"
-    const val PRIVACY_POLICY_LINK = "https://sites.google.com/view/reco-privacy-policy/ana-sayfa"
-    const val TERMS_OF_USE_LINK = "https://sites.google.com/view/recovery-termsofuse/ana-sayfa"
+    const val PRIVACY_POLICY_LINK = "https://sites.google.com/view/rcvr-privacy/ana-sayfa"
+    const val TERMS_OF_USE_LINK = "https://sites.google.com/view/rcvr-terms/ana-sayfa"
 
     const val INTERSTITIAL_ID = "ca-app-pub-7613843390807361/9125056294"
     const val REWARDED_ID = "ca-app-pub-7613843390807361/7811974620"
