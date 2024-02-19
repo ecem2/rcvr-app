@@ -34,13 +34,9 @@ class FilesFetcher(val context: Context) {
                 val tempString = storageList[i]
                 if (!volumesList.contains(tempString)) {
 
-                    Log.d("ecemmm", "$storageList")
                     volumesList.add(tempString)
                 }
             }
-        }else{
-            Log.d("ecemmm", "aaaaaaaaaa")
-
         }
         return volumesList
     }
@@ -103,8 +99,6 @@ class FilesFetcher(val context: Context) {
             }
             finalMountsContainer
         } catch (e: java.lang.Exception) {
-            Log.d("ecemmmm","qwqwrqwreqre ${e.localizedMessage}")
-            e.printStackTrace()
             arrayListOf()
         }
     }

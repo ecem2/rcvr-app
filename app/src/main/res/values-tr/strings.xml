@@ -12,7 +12,7 @@
     <string name="there_are_no_videos_in_your_trash">Çöp kutunuzda hiç video yok</string>
     <string name="restore_audio">Sesi geri yükle</string>
     <string name="restore_video">Videoyu geri yükle</string>
-    <string name="clear_large_media_files">Büyük medya dosyalarını temizleyin</string>
+    <string name="clear_large_media_files">Medya dosyalarını temizle</string>
     <string name="restore_dialog_audio_title">Ses başlığını geri yükle</string>
     <string name="restore_dialog_audio_text">Ses metnini geri yükle</string>
     <string name="audios">Sesler</string>
@@ -24,6 +24,7 @@
     <string name="year_p"> $99.99/ Yıllık</string>
     <string name="month_p"> $99.99/ Aylık</string>
     <string name="no_commitment_cancel_anytime">Taahhüt yok, istediğin zaman iptal et</string>
+    <string name="effortlessly_manage_all_of_your_files">Tüm dosyalarınızı kolayca yönetin</string>
 
 
 

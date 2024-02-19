@@ -12,7 +12,7 @@
     <string name="there_are_no_videos_in_your_trash">There are no videos in your trash</string>
     <string name="restore_audio">Restore audio</string>
     <string name="restore_video">Restore video</string>
-    <string name="clear_large_media_files">Clear large media files</string>
+    <string name="clear_large_media_files">Clear media files</string>
     <string name="restore_dialog_audio_title">Restore audio title</string>
     <string name="restore_dialog_audio_text">Restore audio text</string>
     <string name="audios">Audios</string>
@@ -24,6 +24,7 @@
     <string name="year_p"> $99.99/ Year</string>
     <string name="month_p"> $99.99/ Month</string>
     <string name="no_commitment_cancel_anytime">No commitment, cancel anytime</string>
+    <string name="effortlessly_manage_all_of_your_files">Effortlessly manage all of your files</string>
 
 
     <!-- HOME -->

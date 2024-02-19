@@ -86,41 +86,6 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/progressBarLL"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:visibility="gone"
-            android:layout_marginStart="@dimen/margin_24"
-            android:layout_marginEnd="@dimen/margin_24"
-            app:layout_constraintEnd_toStartOf="@+id/gl_deleted_end"
-            app:layout_constraintStart_toEndOf="@+id/gl_deleted_start"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <ProgressBar
-                android:layout_width="60dp"
-                android:layout_height="60dp" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/margin_16"
-                android:text="@string/a_few_minutes"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_16"
-                app:autoSizeMaxTextSize="@dimen/text_size_20"
-                app:autoSizeMinTextSize="@dimen/text_size_12"
-                app:autoSizeTextType="uniform"
-                android:textAllCaps="false"
-                android:fontFamily="@font/redhatdisplay_bold"/>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_deleted_images"
             android:layout_width="0dp"
@@ -141,6 +106,7 @@
             android:layout_height="match_parent"
             android:background="@color/dialog_shadow"
             android:visibility="gone"
+            tools:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

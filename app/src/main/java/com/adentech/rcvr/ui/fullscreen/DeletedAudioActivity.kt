@@ -77,7 +77,6 @@ class DeletedAudioActivity() : BaseActivity<ScanViewModel, ActivityDeletedAudioB
             getAudioData()
 
             if (audioFile.audioUri != null && isFileUri(audioFile.audioUri!!)) {
-                Log.d("ecoooo", "Audio URI: ${audioFile.audioUri}")
                 currentSong = audioFile.audioUri
 
                 // playContentUri(audioFile.audioUri!!)
@@ -177,7 +176,6 @@ class DeletedAudioActivity() : BaseActivity<ScanViewModel, ActivityDeletedAudioB
 
         try {
             audioFile.audioUri?.let {
-                Log.d("ecoooo", "Audio URI: $it")
                 mediaPlayer?.setDataSource(this, it)
                 mediaPlayer?.prepareAsync()
             }
@@ -287,7 +285,6 @@ class DeletedAudioActivity() : BaseActivity<ScanViewModel, ActivityDeletedAudioB
             openSavedAudioFile(uri)
 
         } catch (e: IOException) {
-            Log.e("ecoooo", "IOException in onBtnSaveAudio: ${e.message}", e)
 
         }
     }
@@ -345,7 +342,6 @@ class DeletedAudioActivity() : BaseActivity<ScanViewModel, ActivityDeletedAudioB
             }, 0)
         } else {
             // mp null ise, gerekli işlemleri yapabilir veya hata mesajı verebilirsiniz.
-            Log.e("ecoooo", "MediaPlayer (mp) null durumunda.")
         }
     }
 

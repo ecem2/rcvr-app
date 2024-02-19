@@ -21,7 +21,6 @@ import com.adentech.rcvr.data.model.FileModel
 import com.adentech.rcvr.data.model.MainFileModel
 import com.adentech.rcvr.databinding.FragmentDeletedVideosBinding
 import com.adentech.rcvr.extensions.observe
-import com.adentech.rcvr.extensions.popBack
 import com.adentech.rcvr.extensions.withDelay
 import com.adentech.rcvr.ui.fullscreen.DeletedVideoActivity
 import com.adentech.rcvr.scan.ScanViewModel
@@ -111,14 +110,13 @@ class DeletedVideosFragment : BaseFragment<ScanViewModel, FragmentDeletedVideosB
     }
 
     private fun getFileList() {
-        val newList = ImagesFilesCollector.foundVideoList.toList()
-        deletedVideosAdapter.submitList(newList)
-        Log.d("aaasss", "$newList")
         volums = FilesFetcher(requireContext()).getStorageVolumes()
         if (volums.isNotEmpty()) {
             myMotor = SearchAllFile(volums, requireActivity(), requireContext())
             myMotor?.execute(*arrayOfNulls(0))
         }
+        val newList = ImagesFilesCollector.foundVideoList.toList()
+        deletedVideosAdapter.submitList(newList)
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -310,10 +308,6 @@ class DeletedVideosFragment : BaseFragment<ScanViewModel, FragmentDeletedVideosB
         }
     }
 
-//    private fun onItemClicked(video: FileModel) {
-//        navigateToDeletedVideoActivity(video)
-//    }
-
     private fun navigateToSubscription() {
         startActivity(Intent(requireContext(), SubscriptionActivity::class.java))
     }
@@ -327,7 +321,7 @@ class DeletedVideosFragment : BaseFragment<ScanViewModel, FragmentDeletedVideosB
 
     private fun setupBackButton() {
         viewBinding.backButton.setOnClickListener {
-            popBack()
+            startActivity(Intent(requireActivity(), ImagesActivity::class.java))
         }
     }
 

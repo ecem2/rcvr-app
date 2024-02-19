@@ -253,7 +253,7 @@ class ImagesActivity : BaseActivity<ResultViewModel, ActivityImagesBinding>() {
             viewBinding.llPermissionError.visibility = View.GONE
         } else {
             viewBinding.llButtons.visibility = View.GONE
-            viewBinding.llPermissionError.visibility = View.VISIBLE
+            //viewBinding.llPermissionError.visibility = View.VISIBLE
         }
     }
 
@@ -302,12 +302,8 @@ class ImagesActivity : BaseActivity<ResultViewModel, ActivityImagesBinding>() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 //Android is 11 (R) or above
                 isStoragePermissionGranted = Environment.isExternalStorageManager()
-            } else {
-                // TODO daha eski  icin check
-                if (isStoragePermissionGranted) {
-
-                } else {
-
+                if (!isStoragePermissionGranted) {
+                    viewBinding.llPermissionError.visibility = View.VISIBLE
                 }
             }
         }

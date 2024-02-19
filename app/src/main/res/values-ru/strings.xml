@@ -13,7 +13,7 @@
     <string name="there_are_no_videos_in_your_trash">В вашей корзине нет видео</string>
     <string name="restore_audio">Восстановить звук</string>
     <string name="restore_video">Восстановить видео</string>
-    <string name="clear_large_media_files">Очистить большие медиафайлы</string>
+    <string name="clear_large_media_files">Удалить большие медиафайлы</string>
     <string name="restore_dialog_audio_title">Восстановить заголовок аудио</string>
     <string name="restore_dialog_audio_text">Восстановить аудиотекст</string>
     <string name="audios">Аудиозаписи</string>
@@ -25,6 +25,7 @@
     <string name="year_p"> $99.99/ Год</string>
     <string name="month_p"> $99.99/ Месяц</string>
     <string name="no_commitment_cancel_anytime">Никаких обязательств, отмените в любое время</string>
+    <string name="effortlessly_manage_all_of_your_files">Без усилий управляйте всеми своими файлами</string>
 
 
 

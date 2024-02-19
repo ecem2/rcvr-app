@@ -64,7 +64,6 @@ class DeletedVideoActivity : BaseActivity<ScanViewModel, ActivityDeletedVideoBin
             val formattedDate = creationDate?.let { format.format(it) }
             viewBinding.tvVideoInfo.text = formattedDate.toString()
         } else {
-            Log.e("getVideoData", "Video file is null")
             finish()
         }
     }

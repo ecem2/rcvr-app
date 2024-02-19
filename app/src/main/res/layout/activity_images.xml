@@ -160,9 +160,10 @@
                         android:layout_weight="1"
                         android:layout_gravity="center|start"
                         android:gravity="center|start"
+                        android:layout_marginStart="@dimen/margin_4"
                         android:textColor="@android:color/white"
-                        android:textSize="10sp"
-                        app:autoSizeMinTextSize="@dimen/text_size_8"
+                        android:textSize="11sp"
+                        app:autoSizeMinTextSize="@dimen/text_size_10"
                         app:autoSizeMaxTextSize="@dimen/text_size_12"
                         app:autoSizeTextType="uniform"
                         android:maxLines="1"
@@ -214,6 +215,7 @@
                 android:id="@+id/imageCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
                 android:background="@drawable/image_card">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -288,6 +290,7 @@
                 android:id="@+id/videoCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
                 android:background="@drawable/video_card">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -360,6 +363,7 @@
                 android:id="@+id/audioCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
                 android:background="@drawable/audio_card">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -432,6 +436,7 @@
                 android:id="@+id/fileCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
                 android:background="@drawable/files_card">
 
                 <androidx.appcompat.widget.LinearLayoutCompat

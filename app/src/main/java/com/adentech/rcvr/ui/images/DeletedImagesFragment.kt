@@ -2,12 +2,14 @@ package com.adentech.rcvr.ui.images
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -19,6 +21,7 @@ import com.adentech.rcvr.core.common.Constants
 import com.adentech.rcvr.core.common.Resource
 import com.adentech.rcvr.core.common.Status
 import com.adentech.rcvr.core.fragments.BaseFragment
+import com.adentech.rcvr.data.model.FileLocation
 import com.adentech.rcvr.data.model.FileModel
 import com.adentech.rcvr.data.model.MainFileModel
 import com.adentech.rcvr.databinding.FragmentDeletedImagesBinding
@@ -46,7 +49,6 @@ import kotlin.random.Random
 class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesBinding>() {
 
     private val deletedImagesAdapter by lazy {
-
         DeletedImagesAdapter(
             hasReward = false,
             context = requireContext(),
@@ -57,46 +59,39 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
     private var myMotor: SearchAllFile? = null
     private var volums: ArrayList<String> = ArrayList()
     private var rewardedList: List<Int>? = null
-    private val _isStoragePermissionGranted: MutableLiveData<Boolean> = MutableLiveData()
     private var rewardedCount = 0
     private var fileModel: FileModel? = null
+    private val customImageList: ArrayList<FileModel> = ArrayList()
 
     override fun getResourceLayoutId() = R.layout.fragment_deleted_images
 
     override fun viewModelClass() = ScanViewModel::class.java
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (RecoveryApplication.isPremium) {
-            getFileList()
-        } else {
-            adjustImages()
-            getFileList()
-        }
-    }
-
     override fun onInitDataBinding() {
+        setupBackButton()
+        handleBackPressed()
+        initRecyclerView()
         if (RecoveryApplication.isPremium) {
-            getFileList()
-            viewBinding.cardScanProgress.visibility = View.GONE
+            viewBinding.cardScanProgress.visibility = View.VISIBLE
+            viewBinding.clResultDialog.visibility = View.GONE
+            viewBinding.deletedImagesCl.visibility = View.GONE
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 viewModel.getAllTrashedFiles()
                 observe(viewModel.allTrashedFilesList, ::getTrashedList)
-
+            } else {
+                getFileList()
             }
         } else {
-            adjustImages()
             viewBinding.cardScanProgress.visibility = View.VISIBLE
             viewBinding.llPermissionError.visibility = View.GONE
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 viewModel.getAllGalleryImages()
                 observe(viewModel.imageList, ::getImagesList)
             } else {
                 getFileList()
-
             }
         }
-        initRecyclerView()
         viewBinding.buttonRestoreNow.setOnClickListener {
             if (RecoveryApplication.isPremium) {
                 navigateToDeletedImageActivity(fileModel)
@@ -104,7 +99,6 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
                 navigateToSubscription()
             }
         }
-        setupBackButton()
     }
 
     private fun initRecyclerView() {
@@ -118,13 +112,11 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
     }
 
     private fun getFileList() {
-        val newList = ImagesFilesCollector.foundImagesList.toList()
-        deletedImagesAdapter.submitList(newList)
-        Log.d("aaasss", "$newList")
         volums = FilesFetcher(requireContext()).getStorageVolumes()
         if (volums.isNotEmpty()) {
             myMotor = SearchAllFile(volums, requireActivity(), requireContext())
             myMotor?.execute(*arrayOfNulls(0))
+            deletedImagesAdapter.submitList(ImagesFilesCollector.foundImagesList)
         }
     }
 
@@ -163,10 +155,59 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         }
     }
 
+    private fun handleBackPressed() {
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                startActivity(Intent(requireActivity(), ImagesActivity::class.java)).also {
+                    requireActivity().finish()
+                }
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
+    }
+
+    private fun getResourceUri(resId: Int): Uri {
+        return Uri.parse("android.resource://${requireActivity().packageName}/$resId")
+    }
+
+    private fun getResourceId(resourceName: String, c: Class<*>): Int {
+        return try {
+            val idField = c.getDeclaredField(resourceName)
+            idField.getInt(idField)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            -1
+        }
+    }
+
     private fun getImagesList(resource: Resource<ArrayList<FileModel>>) {
         when (resource.status) {
             Status.SUCCESS -> {
-                resource.data?.let { }
+                resource.data?.let {
+                    if (it.size < 200) {
+                        for (i in 1..82) {
+                            val fileName = "small$i"
+                            val resId = getResourceId(fileName, R.drawable::class.java)
+
+                            customImageList.add(
+                                FileModel(
+                                    fileName = "",
+                                    fileExtension = "",
+                                    location = FileLocation.NO_MEDIA,
+                                    isSelected = false,
+                                    creationDate = 0L,
+                                    fileSize = "",
+                                    isDeleted = true,
+                                    imageUri = getResourceUri(resId),
+                                    isRewarded = false
+                                )
+                            )
+                        }
+                        adjustImages(customImageList, true)
+                    } else {
+                        adjustImages(it, false)
+                    }
+                }
             }
 
             Status.ERROR -> {
@@ -177,8 +218,7 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
             }
 
             Status.LOADING -> {
-                viewBinding.progressBarLL.visibility = View.GONE
-                viewBinding.progressBarLL.visibility = View.VISIBLE
+                viewBinding.cardScanProgress.visibility = View.VISIBLE
             }
         }
     }
@@ -198,59 +238,124 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
         return positions
     }
 
-    private fun adjustImages() {
-        val min = ImagesFilesCollector.foundImagesList.size / 5
-        val max = ImagesFilesCollector.foundImagesList.size / 2
-        val count = if (ImagesFilesCollector.foundImagesList.size / 50 > 3) {
-            160
+    private fun adjustImages(imageList: ArrayList<FileModel>, isCustom: Boolean) {
+        val adjustedImageList: ArrayList<FileModel> = ArrayList()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            adjustedImageList.addAll(imageList)
         } else {
-            ImagesFilesCollector.foundImagesList.size / 10 + 1
+            adjustedImageList.addAll(ImagesFilesCollector.foundImagesList)
+        }
+        val min = adjustedImageList.size / 5
+        val max = adjustedImageList.size / 2
+//        val count = if (adjustedImageList.size / 50 > 3) {
+//            160
+//        } else {
+//            adjustedImageList.size / 10 + 1
+//        }
+
+        val count = if (adjustedImageList.size < 200) {
+            83
+        } else {
+            if (adjustedImageList.size < 1000) {
+                (adjustedImageList.size / 6) + 1
+            } else {
+                160
+            }
         }
 
         val indexesArray: ArrayList<Int> = ArrayList()
         val currentList: ArrayList<FileModel> = ArrayList()
         lifecycleScope.launch {
-            if (ImagesFilesCollector.foundImagesList.isNotEmpty()) {
+            if (adjustedImageList.isNotEmpty()) {
                 viewBinding.llEmptyFolder.visibility = View.GONE
                 viewBinding.tvProgressBar.text = getString(R.string.photos_recovered)
-
-                while (indexesArray.size < count) {
-                    val randomNumber = Random.nextInt(min, max + 1)
-                    if (randomNumber !in indexesArray) {
-                        indexesArray.add(randomNumber)
+                if (isCustom) {
+                    for (i in 0..81) {
+                        indexesArray.add(i)
                     }
-                }
 
-                if (ImagesFilesCollector.foundImagesList.isNotEmpty()) {
+                    for (img in 0 until indexesArray.size) {
+                        val randomTime = Random.nextLong(50, 150)
+                        delay(randomTime)
+                        withContext(Dispatchers.Main) {
+                            val chosenImage: FileModel = imageList[indexesArray[img]]
+//                            newList.add(0, chosenImage)
+
+                            currentList.add(0, chosenImage)
+                            val newList: ArrayList<FileModel> = ArrayList()
+                            newList.addAll(currentList)
+
+                            deletedImagesAdapter.submitList(newList)
+                            rewardedList = getThreeRandomPositions(newList)
+                            viewBinding.rvDeletedImages.scrollToPosition(0)
+                        }
+                    }
+                } else {
+                    while (indexesArray.size < count) {
+                        val randomNumber = Random.nextInt(min, max + 1)
+                        if (randomNumber !in indexesArray) {
+                            indexesArray.add(randomNumber)
+                        }
+                    }
                     for (img in 1..indexesArray.size) {
                         val randomTime = Random.nextLong(120, 230)
                         delay(randomTime)
                         withContext(Dispatchers.Main) {
-                            val chosenImage: FileModel =
-                                ImagesFilesCollector.foundImagesList[indexesArray[img - 1]]
+                            val chosenImage: FileModel = imageList[indexesArray[img - 1]]
                             currentList.add(0, chosenImage)
-                            currentList.add(chosenImage)
+                            val newList: ArrayList<FileModel> = ArrayList()
+                            newList.addAll(currentList)
+                            deletedImagesAdapter.submitList(newList)
+                            rewardedList = getThreeRandomPositions(newList)
+                            viewBinding.rvDeletedImages.scrollToPosition(0)
                         }
                     }
+                }
+                withDelay(2000, ::showDialog)
 
-                    if (!isSameList(currentList, deletedImagesAdapter.currentList)) {
-                        val newList: ArrayList<FileModel> = ArrayList()
-                        newList.addAll(currentList)
-                        deletedImagesAdapter.submitList(currentList.toList())
-                        deletedImagesAdapter.notifyDataSetChanged()
-                        rewardedList = getThreeRandomPositions(newList)
-                        viewBinding.rvDeletedImages.scrollToPosition(0)
-                    }
 
-                    withDelay(2000) {
-                        showDialog()
-                        viewBinding.clResultDialog.visibility = View.VISIBLE
-                    }
-                } else {
-                    withContext(Dispatchers.Main) {
-                        viewBinding.cardScanProgress.visibility = View.GONE
-                        viewBinding.llEmptyFolder.visibility = View.VISIBLE
-                    }
+//                while (indexesArray.size < count) {
+//                    val randomNumber = Random.nextInt(min, max + 1)
+//                    if (randomNumber !in indexesArray) {
+//                        indexesArray.add(randomNumber)
+//                    }
+//                }
+//
+//                if (adjustedImageList.isNotEmpty()) {
+//                    for (img in 1..indexesArray.size) {
+//                        val randomTime = Random.nextLong(120, 230)
+//                        delay(randomTime)
+//                        withContext(Dispatchers.Main) {
+//                            val chosenImage: FileModel =
+//                                adjustedImageList[indexesArray[img - 1]]
+//                            currentList.add(0, chosenImage)
+//                            currentList.add(chosenImage)
+//                        }
+//                    }
+//
+//                    if (!isSameList(currentList, deletedImagesAdapter.currentList)) {
+//                        val newList: ArrayList<FileModel> = ArrayList()
+//                        newList.addAll(currentList)
+//                        deletedImagesAdapter.submitList(currentList.toList())
+//                        deletedImagesAdapter.notifyDataSetChanged()
+//                        rewardedList = getThreeRandomPositions(newList)
+//                        viewBinding.rvDeletedImages.scrollToPosition(0)
+//                    }
+//
+//                    withDelay(2000) {
+//                        showDialog()
+//                        viewBinding.clResultDialog.visibility = View.VISIBLE
+//                    }
+//                } else {
+//                    withContext(Dispatchers.Main) {
+//                        viewBinding.cardScanProgress.visibility = View.GONE
+//                        viewBinding.llEmptyFolder.visibility = View.VISIBLE
+//                    }
+//                }
+            } else {
+                withContext(Dispatchers.Main) {
+                    viewBinding.cardScanProgress.visibility = View.GONE
+                    viewBinding.llEmptyFolder.visibility = View.VISIBLE
                 }
             }
         }
@@ -333,8 +438,8 @@ class DeletedImagesFragment : BaseFragment<ScanViewModel, FragmentDeletedImagesB
             val intent = Intent(requireContext(), DeletedImageActivity::class.java)
             intent.putExtra(Constants.IMAGE_PATH, imagePath)
             startActivity(intent)
-        }catch (e: java.lang.Exception){
-            Log.d("aaffaa","$e")
+        } catch (e: java.lang.Exception) {
+
         }
 
     }

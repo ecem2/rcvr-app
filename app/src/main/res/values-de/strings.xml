@@ -13,7 +13,7 @@
     <string name="there_are_no_videos_in_your_trash">Es befinden sich keine Videos in Ihrem Papierkorb</string>
     <string name="restore_audio">Audio wiederherstellen</string>
     <string name="restore_video">Video wiederherstellen</string>
-    <string name="clear_large_media_files">Löschen Sie große Mediendateien</string>
+    <string name="clear_large_media_files">Große Mediendateien löschen</string>
     <string name="restore_dialog_audio_title">Audiotitel wiederherstellen</string>
     <string name="restore_dialog_audio_text">Audiotext wiederherstellen</string>
     <string name="audios">Audiotext wiederherstellen</string>
@@ -25,6 +25,7 @@
     <string name="year_p"> $99.99/ Jahr</string>
     <string name="month_p"> $99.99/ Monat</string>
     <string name="no_commitment_cancel_anytime">Keine Verpflichtung, jederzeit kündbar</string>
+    <string name="effortlessly_manage_all_of_your_files">Mühelos alle Ihre Dateien verwalten</string>
 
 
 
